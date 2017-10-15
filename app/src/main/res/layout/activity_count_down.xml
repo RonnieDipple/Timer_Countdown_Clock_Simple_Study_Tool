@@ -14,7 +14,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/tunnel" />
+        app:srcCompat="@drawable/architecture" />
 
     <TextView
         android:id="@+id/textView2"
