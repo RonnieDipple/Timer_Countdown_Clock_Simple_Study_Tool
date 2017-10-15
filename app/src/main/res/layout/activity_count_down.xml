@@ -45,4 +45,50 @@
         android:max="60"
         android:progress="60"/>
 
+
+
+
+
+
+
+    <EditText
+        android:id="@+id/editTextCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:hint="@string/enter_seconds"
+        android:inputType="number"
+        android:maxLength="4"
+
+        />
+
+    <TextView
+        android:id="@+id/textViewCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="100sp"
+        android:text="@string/_00"/>
+
+    <ImageView
+        android:id="@+id/imageViewReset"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_reset"
+        android:layout_below="@+id/textViewCount"
+        android:layout_centerInParent="true"
+        android:contentDescription="RESET BUTTON" />
+
+
+    <ImageView
+        android:id="@+id/imageViewSwitch"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_start"
+        android:layout_marginBottom="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"/>
+
 </RelativeLayout>
