@@ -7,7 +7,7 @@
     tools:context="com.yolasite.hardtapgames.timercountdownclocksimplestudytool.MainActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageView1"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:contentDescription="@string/background"
@@ -35,7 +35,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="@+id/imageView1" />
 
     <Button
         android:id="@+id/pressToStartBtn"
@@ -49,7 +49,7 @@
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
