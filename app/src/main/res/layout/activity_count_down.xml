@@ -52,7 +52,7 @@
 
 
     <EditText
-        android:id="@+id/editTextCount"
+        android:id="@+id/editTCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -64,7 +64,7 @@
         />
 
     <TextView
-        android:id="@+id/textViewCount"
+        android:id="@+id/txtViewCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -77,7 +77,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:src="@drawable/ic_reset"
-        android:layout_below="@+id/textViewCount"
+        android:layout_below="@+id/txtViewCount"
         android:layout_centerInParent="true"
         android:contentDescription="RESET BUTTON" />
 
@@ -86,9 +86,10 @@
         android:id="@+id/imageViewSwitch"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:src="@drawable/ic_start"
-        android:layout_marginBottom="30dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"/>
+        android:layout_alignTop="@+id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:src="@drawable/ic_start" />
+
 
 </RelativeLayout>
