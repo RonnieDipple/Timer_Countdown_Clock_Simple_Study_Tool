@@ -25,8 +25,8 @@ class CountDownActivity : AppCompatActivity() {
         pBar = findViewById(R.id.progressBar)
 
         pBar = findViewById<ProgressBar>(R.id.progressBar)
-        editTCount = findViewById<EditText>(R.id.editTextCount)
-        txtViewCount = findViewById<TextView>(R.id.textViewCount)
+        editTCount = findViewById<EditText>(R.id.editTCount)
+        txtViewCount = findViewById<TextView>(R.id.txtViewCount)
         imageViewSwitch = findViewById<ImageView>(R.id.imageViewSwitch)
         imageViewReset = findViewById<ImageView>(R.id.imageViewReset)
 

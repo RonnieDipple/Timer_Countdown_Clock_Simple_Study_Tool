@@ -47,21 +47,23 @@
         android:progressDrawable="@drawable/circle"/>
 
 
+
+
     <EditText
         android:id="@+id/editTCount"
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/progressBar"
         android:layout_centerHorizontal="true"
-        android:backgroundTint="#7E7674"
         android:gravity="center"
         android:hint="@string/enter_seconds"
         android:inputType="number"
         android:maxLength="4"
+        android:textCursorDrawable="@null"
         android:textColor="#7E7674"
         android:textColorLink="@android:color/black"
-        android:textCursorDrawable="@null"
-        android:textSize="30sp" />
+        android:backgroundTint="#7E7674"
+
+        />
 
 
 

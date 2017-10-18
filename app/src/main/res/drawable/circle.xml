@@ -4,8 +4,10 @@
     android:innerRadiusRatio="2.3"
     android:shape="ring"
     android:thickness="15dp"
-    android:useLevel="true">
+    android:useLevel="true"
 
-    <solid android:color="@color/colorPrimary" />
+    >
+
+    <solid android:color="#642815" />
 
 </shape>
