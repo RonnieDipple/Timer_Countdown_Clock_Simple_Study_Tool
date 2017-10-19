@@ -1,11 +1,15 @@
 package com.yolasite.hardtapgames.timercountdownclocksimplestudytool
 
+
+import android.media.MediaPlayer
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.Window
 import android.view.WindowManager
 import android.widget.*
+
+
 
 class CountDownActivity : AppCompatActivity() {
     lateinit private var pBar: ProgressBar
@@ -40,7 +44,9 @@ class CountDownActivity : AppCompatActivity() {
                     start()
                 }
             } else {
+
                 stop()
+
             }
         }
 
@@ -53,6 +59,7 @@ class CountDownActivity : AppCompatActivity() {
             pBar.max = timeInMillis.toInt() / 1000
         }
     }
+
     private fun start() {
         val textInput = editTCount.text.toString()
         val timeInput = textInput.toLong() * 1000
@@ -62,6 +69,7 @@ class CountDownActivity : AppCompatActivity() {
         imageViewSwitch.setImageResource(R.drawable.ic_stop)
         isRunning = true
 
+
         countDownTimer = object : CountDownTimer(timeInMillis, 100) {
             override fun onTick(millisUntilFinished: Long) {
                 txtViewCount.text = Math.round(millisUntilFinished * 0.001f).toString()
@@ -70,15 +78,31 @@ class CountDownActivity : AppCompatActivity() {
 
             override fun onFinish() {
 
+                playSound()
+
+
             }
         }.start()
         countDownTimer.start()
+
+
     }
 
     private fun stop() {
         imageViewSwitch.setImageResource(R.drawable.ic_start)
         isRunning = false
         countDownTimer.cancel()
+
     }
+
+    private fun playSound() {
+
+        val mp = MediaPlayer.create(this, R.raw.tone)
+
+        mp.start()
+
+    }
+
+
 }
 

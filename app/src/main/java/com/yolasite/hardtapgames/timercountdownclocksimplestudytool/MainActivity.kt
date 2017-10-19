@@ -18,8 +18,8 @@ class MainActivity : AppCompatActivity() {
 
         pressToStartBtn.setOnClickListener {
 
-            val leagueIntent = Intent(this, CountDownActivity::class.java)
-            startActivity(leagueIntent)
+            val cIntent = Intent(this, CountDownActivity::class.java)
+            startActivity(cIntent)
         }
     }
 }
