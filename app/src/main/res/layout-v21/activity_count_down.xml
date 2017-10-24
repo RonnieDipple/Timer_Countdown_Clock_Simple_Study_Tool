@@ -55,9 +55,8 @@
         android:layout_centerHorizontal="true"
         android:backgroundTint="#7E7674"
         android:gravity="center"
-        android:hint="@string/enter_seconds"
+        android:hint="Enter minutes"
         android:inputType="number"
-
         android:maxLength="4"
         android:textColor="#7E7674"
         android:textColorLink="@android:color/black"
@@ -65,16 +64,28 @@
         android:textSize="30sp" />
 
 
-
     <TextView
         android:id="@+id/txtViewCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/imageViewReset"
         android:text="@string/_00"
         android:textColor="#642815"
         android:textColorLink="#642815"
-        android:textSize="100sp" />
+        android:textSize="50sp" />
+
+
+    <TextView
+        android:id="@+id/txtViewCountMinutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageViewReset"
+        android:layout_toStartOf="@+id/imageViewReset"
+        android:text="@string/_00"
+        android:textColor="#642815"
+        android:textColorLink="#642815"
+        android:textSize="50sp" />
 
     <ImageView
         android:id="@+id/imageViewReset"
@@ -97,6 +108,16 @@
 
         />
 
+    <TextView
+        android:id="@+id/seperatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageViewReset"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/montserrat"
+        android:text=":"
+        android:textColor="#642815"
+        android:textSize="60sp" />
 
 
 </RelativeLayout>
