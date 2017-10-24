@@ -57,7 +57,7 @@
         android:gravity="center"
         android:hint="Enter minutes"
         android:inputType="number"
-        android:maxLength="4"
+        android:maxLength="2"
         android:textColor="#7E7674"
         android:textColorLink="@android:color/black"
         android:textCursorDrawable="@null"
@@ -71,8 +71,8 @@
         android:layout_centerVertical="true"
         android:layout_toEndOf="@+id/imageViewReset"
         android:text="@string/_00"
-        android:textColor="#642815"
-        android:textColorLink="#642815"
+        android:textColor="@android:color/white"
+        android:textColorLink="#7E7674"
         android:textSize="50sp" />
 
 
@@ -83,8 +83,8 @@
         android:layout_above="@+id/imageViewReset"
         android:layout_toStartOf="@+id/imageViewReset"
         android:text="@string/_00"
-        android:textColor="#642815"
-        android:textColorLink="#642815"
+        android:textColor="@android:color/white"
+        android:textColorLink="#7E7674"
         android:textSize="50sp" />
 
     <ImageView
