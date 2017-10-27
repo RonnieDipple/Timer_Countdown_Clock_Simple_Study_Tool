@@ -1,29 +1,43 @@
 package com.yolasite.hardtapgames.timercountdownclocksimplestudytool
 
 
+import android.annotation.SuppressLint
 import android.media.MediaPlayer
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.Window
 import android.view.WindowManager
 import android.widget.*
-
 
 
 class CountDownActivity : AppCompatActivity() {
     lateinit private var pBar: ProgressBar
     lateinit private var editTCount: EditText
     lateinit private var txtViewCount: TextView
-    lateinit private var imageViewSwitch: ImageView
+    lateinit private var imageViewPlayButton: ImageView
     lateinit private var imageViewReset: ImageView
     lateinit private var countDownTimer: CountDownTimer
     lateinit private var txtViewCountMinutes: TextView
-    internal var isRunning = false
+    lateinit private var imagePauseView: ImageView
+    lateinit private var secondCountDownTimer: CountDownTimer
+
+
+    private var isRunning = false
     internal var timeInMillis: Long = 0
-    internal var resetZero: Long = 0
+    internal var millisLeft: Long = 0
+    private var isPaused = false
+    internal var count = 0
+    internal var resetCount = 0
+    internal var pauseCount = 0
+    internal var startCount = 0
 
 
+
+
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requestWindowFeature(Window.FEATURE_NO_TITLE)
@@ -34,18 +48,64 @@ class CountDownActivity : AppCompatActivity() {
         pBar = findViewById<ProgressBar>(R.id.progressBar)
         editTCount = findViewById<EditText>(R.id.editTCount)
         txtViewCount = findViewById<TextView>(R.id.txtViewCount)
-        imageViewSwitch = findViewById<ImageView>(R.id.imageViewSwitch)
+        imageViewPlayButton = findViewById<ImageView>(R.id.imageViewPlayButton)
         imageViewReset = findViewById<ImageView>(R.id.imageViewReset)
         txtViewCountMinutes = findViewById<EditText>(R.id.txtViewCountMinutes)
+        imagePauseView = findViewById<ImageView>(R.id.imagePauseView)
+
+
+        editTCount.addTextChangedListener(object : TextWatcher {
+
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
+
+
+            }
+
+            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int,
+                                           after: Int) {
+
+            }
+
+            override fun afterTextChanged(s: Editable) {
+
+                if(!isRunning){
 
 
 
-        imageViewSwitch.setOnClickListener {
+                millisLeft = 0
+                isRunning = false
+
+                txtViewCount.text = "" + timeInMillis / 1000
+                txtViewCountMinutes.text = "" + timeInMillis / 1000
+                pBar.progress = timeInMillis.toInt() + 0
+                pBar.max = timeInMillis.toInt() / 1000}
+
+            }
+        })
+
+        imagePauseView.setOnClickListener {
+            count++
+            pauseCount++
+            isPaused = true
+            stop()
+
+        }
+
+        imageViewPlayButton.setOnClickListener {
             if (!isRunning) {
                 if (editTCount.text.toString().isEmpty()) {
                     Toast.makeText(this@CountDownActivity, "Enter number of minutes", Toast.LENGTH_LONG).show()
-                } else {
+
+                }else if (startCount > 0){
+
+                    Toast.makeText(this@CountDownActivity, "Please double tap the play button to confirm the new number", Toast.LENGTH_SHORT).show()
+
+
                     start()
+                } else {
+
+                    start()
+
                 }
             } else {
 
@@ -56,27 +116,48 @@ class CountDownActivity : AppCompatActivity() {
 
         imageViewReset.setOnClickListener {
             stop()
+            millisLeft = 0
             isRunning = false
-            imageViewSwitch.setImageResource(R.drawable.ic_start)
-            txtViewCount.text = "" + resetZero
-            txtViewCountMinutes.text =  "" + resetZero
-            pBar.progress = timeInMillis.toInt() / 1000
+            imageViewPlayButton.setImageResource(R.drawable.ic_start)
+            countDownTimer.cancel()
+            txtViewCount.text = "" + timeInMillis / 1000
+            txtViewCountMinutes.text = "" + timeInMillis / 1000
+            pBar.progress = timeInMillis.toInt() + 0
             pBar.max = timeInMillis.toInt() / 1000
+            resetCount++
+
+
         }
     }
 
     private fun start() {
+
         val textInput = editTCount.text.toString()
         val timeInput = textInput.toLong() * 60 * 1000
         timeInMillis = timeInput
-
         pBar.max = timeInMillis.toInt() / 1000
-        imageViewSwitch.setImageResource(R.drawable.ic_stop)
+        pauseCount--
+        startCount++
+
+
+        while(isPaused && count > 0){
+            timeInMillis = millisLeft
+            count--
+
+
+
+
+        }
+
+
+
+        imageViewPlayButton.setImageResource(R.drawable.ic_stop)
         isRunning = true
 
 
         countDownTimer = object : CountDownTimer(timeInMillis, 100) {
             override fun onTick(millisUntilFinished: Long) {
+
 
                 val minutes = millisUntilFinished / 1000 / 60
                 val seconds = millisUntilFinished / 1000 % 60
@@ -84,11 +165,30 @@ class CountDownActivity : AppCompatActivity() {
                 txtViewCountMinutes.text = minutes.toString()
                 txtViewCount.text = seconds.toString()
                 pBar.progress = Math.round(millisUntilFinished * 0.001f)
+                millisLeft = millisUntilFinished
+
+
             }
 
             override fun onFinish() {
+                imageViewPlayButton.setImageResource(R.drawable.ic_start)
+                isRunning = false
+                timeInMillis = 0
+                txtViewCount.text = "" + timeInMillis
+                txtViewCountMinutes.text = "" + timeInMillis
+                pBar.progress = timeInMillis.toInt() + 0
+                pBar.max = timeInMillis.toInt() / 1000
 
-                playSound()
+                if (resetCount <= 0 && pauseCount <= 0){
+                    playSound()
+                    resetCount--
+                }
+
+
+
+
+
+
 
 
             }
@@ -99,9 +199,11 @@ class CountDownActivity : AppCompatActivity() {
     }
 
     private fun stop() {
-        imageViewSwitch.setImageResource(R.drawable.ic_start)
+        imageViewPlayButton.setImageResource(R.drawable.ic_start)
         isRunning = false
+        timeInMillis = 0
         countDownTimer.cancel()
+
 
     }
 

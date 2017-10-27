@@ -44,49 +44,64 @@
         android:indeterminate="false"
         android:max="60"
         android:progress="60"
-        android:progressDrawable="@drawable/circle"/>
+        android:progressDrawable="@drawable/circle" />
 
 
     <EditText
         android:id="@+id/editTCount"
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/progressBar"
         android:layout_centerHorizontal="true"
         android:backgroundTint="#7E7674"
         android:gravity="center"
-        android:hint="@string/enter_seconds"
+        android:hint="Enter minutes"
         android:inputType="number"
-        android:maxLength="4"
+        android:maxLength="2"
         android:textColor="#7E7674"
         android:textColorLink="@android:color/black"
         android:textCursorDrawable="@null"
         android:textSize="30sp" />
 
 
-
     <TextView
         android:id="@+id/txtViewCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_alignBaseline="@+id/seperatorView"
+        android:layout_alignBottom="@+id/seperatorView"
+        android:layout_toEndOf="@+id/seperatorView"
         android:text="@string/_00"
-        android:textColor="#642815"
-        android:textColorLink="#642815"
-        android:textSize="100sp" />
+        android:textColor="@android:color/white"
+        android:textColorLink="#7E7674"
+        android:textSize="50sp" />
+
+
+    <TextView
+        android:id="@+id/txtViewCountMinutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignBaseline="@+id/seperatorView"
+        android:layout_alignBottom="@+id/seperatorView"
+        android:layout_toStartOf="@+id/seperatorView"
+        android:text="@string/_00"
+        android:textColor="@android:color/white"
+        android:textColorLink="#7E7674"
+        android:textSize="50sp" />
 
     <ImageView
         android:id="@+id/imageViewReset"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@drawable/ic_reset"
-        android:layout_below="@+id/txtViewCount"
-        android:layout_centerInParent="true"
-        android:contentDescription="RESET BUTTON" />
+        android:layout_below="@+id/txtViewCountMinutes"
+        android:layout_toStartOf="@+id/seperatorView"
+        android:contentDescription="RESET BUTTON"
+        android:src="@drawable/ic_reset" />
 
 
     <ImageView
-        android:id="@+id/imageViewSwitch"
+        android:id="@+id/imageViewPlayButton"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_alignTop="@+id/progressBar"
@@ -96,6 +111,24 @@
 
         />
 
+    <TextView
+        android:id="@+id/seperatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewPlayButton"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/montserrat"
+        android:text=":"
+        android:textColor="#642815"
+        android:textSize="60sp" />
+
+    <ImageView
+        android:id="@+id/imagePauseView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/txtViewCount"
+        android:layout_toEndOf="@+id/seperatorView"
+        android:src="@drawable/ic_pause" />
 
 
 </RelativeLayout>
