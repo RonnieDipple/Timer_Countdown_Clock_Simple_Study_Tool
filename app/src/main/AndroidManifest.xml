@@ -23,7 +23,7 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".CountDownActivity" />
+        <activity android:name=".CountDownActivity" android:configChanges="orientation|screenSize"/>
 
 
     </application>

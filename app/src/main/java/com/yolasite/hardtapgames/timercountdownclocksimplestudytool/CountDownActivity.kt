@@ -2,6 +2,7 @@ package com.yolasite.hardtapgames.timercountdownclocksimplestudytool
 
 
 import android.annotation.SuppressLint
+import android.content.res.Configuration
 import android.media.MediaPlayer
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -213,6 +214,14 @@ class CountDownActivity : AppCompatActivity() {
 
         mp.start()
 
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        // When phone orientation changes this keeps the data the same
+        // added the line android:configChanges="orientation|screenSize" to <activity android:name=".CountDownActivity" /> making it
+        //  <activity android:name=".CountDownActivity" android:configChanges="orientation|screenSize"/> in AndroidManifest.xml:
+        // in order to get this to work
     }
 
 
