@@ -14,7 +14,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/architecture" />
+        app:srcCompat="@drawable/architecture"
+        android:contentDescription="@string/back_ground_image_of_a_tunnel" />
 
     <TextView
         android:id="@+id/textView2"
@@ -25,7 +26,7 @@
         android:layout_marginStart="8dp"
         android:background="#73000000"
         android:fontFamily="sans-serif"
-        android:text="This timer counts down"
+        android:text="@string/this_timer_counts_down"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="36sp"
@@ -55,7 +56,7 @@
         android:layout_centerHorizontal="true"
         android:backgroundTint="#7E7674"
         android:gravity="center"
-        android:hint="Enter minutes"
+        android:hint="@string/enter_minutes"
         android:inputType="number"
         android:maxLength="2"
         android:textColor="#7E7674"
@@ -96,7 +97,7 @@
         android:layout_height="50dp"
         android:layout_below="@+id/txtViewCountMinutes"
         android:layout_toStartOf="@+id/seperatorView"
-        android:contentDescription="RESET BUTTON"
+        android:contentDescription="@string/reset_button"
         android:src="@drawable/ic_reset" />
 
 
@@ -108,8 +109,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="26dp"
         android:src="@drawable/ic_start"
-
-        />
+        android:contentDescription="@string/this_button_starts_the_count_down_timer" />
 
     <TextView
         android:id="@+id/seperatorView"
@@ -118,7 +118,7 @@
         android:layout_below="@+id/imageViewPlayButton"
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/montserrat"
-        android:text=":"
+        android:text="@string/seperator"
         android:textColor="#642815"
         android:textSize="60sp" />
 
@@ -128,7 +128,8 @@
         android:layout_height="50dp"
         android:layout_below="@+id/txtViewCount"
         android:layout_toEndOf="@+id/seperatorView"
-        android:src="@drawable/ic_pause" />
+        android:src="@drawable/ic_pause"
+        android:contentDescription="@string/pauses_the_count_down_timer" />
 
 
 </RelativeLayout>

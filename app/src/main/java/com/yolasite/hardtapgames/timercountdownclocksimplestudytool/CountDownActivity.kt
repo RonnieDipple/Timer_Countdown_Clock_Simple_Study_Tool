@@ -4,10 +4,9 @@ package com.yolasite.hardtapgames.timercountdownclocksimplestudytool
 import android.annotation.SuppressLint
 import android.content.res.Configuration
 import android.media.MediaPlayer
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.os.PersistableBundle
+import android.support.v7.app.AppCompatActivity
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.Window
@@ -25,18 +24,14 @@ class CountDownActivity : AppCompatActivity() {
     lateinit private var txtViewCountMinutes: TextView
     lateinit private var imagePauseView: ImageView
 
+    internal var timeInMillis: Long = 0
+    internal var millisLeft: Long = 0
 
 
     private var isRunning = false
-    internal var timeInMillis: Long = 0
-    internal var millisLeft: Long = 0
+    private var isReset = false
     private var isPaused = false
     private var count = 0
-    internal var resetCount = 0
-    internal var pauseCount = 0
-    private var startCount = 0
-
-
 
 
 
@@ -46,19 +41,21 @@ class CountDownActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         this.window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
-        setContentView(R.layout.activity_count_down)
-        pBar = findViewById(R.id.progressBar)
+        setContentView(R.layout.activity_count_down) //<-the main countdown view
 
-        pBar = findViewById(R.id.progressBar)
-        editTCount = findViewById(R.id.editTCount)
-        txtViewCount = findViewById(R.id.txtViewCount)
-        imageViewPlayButton = findViewById(R.id.imageViewPlayButton)
-        imageViewReset = findViewById(R.id.imageViewReset)
-        txtViewCountMinutes = findViewById<EditText>(R.id.txtViewCountMinutes)
-        imagePauseView = findViewById(R.id.imagePauseView)
+        pBar = findViewById(R.id.progressBar) //<- initialises the circular progress bar
+        editTCount = findViewById(R.id.editTCount) //<- initialises the field to input the to count down
+        txtViewCount = findViewById(R.id.txtViewCount)//<- initialises the visual representation of the seconds in the count down
+        txtViewCountMinutes = findViewById<EditText>(R.id.txtViewCountMinutes)//<- initialises the visual representation of the minutes in the count down
+        imageViewPlayButton = findViewById(R.id.imageViewPlayButton) //<- initialises the button that starts the count down
+        imageViewReset = findViewById(R.id.imageViewReset)//<- initialises the button that resets the count down
+        imagePauseView = findViewById(R.id.imagePauseView)//<- initialises the button that pauses the count down
 
 
         editTCount.addTextChangedListener(object : TextWatcher {
+            // addTextChangedListener "listens" to see if text has been changed in the editTcound text field
+            //TextWatcher then acts based on the text before it was change, during the change and after the change
+            //afterTextChanged is the only field where you can  edit the text and actions of the editTcount view
 
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
 
@@ -71,21 +68,24 @@ class CountDownActivity : AppCompatActivity() {
             }
 
             override fun afterTextChanged(s: Editable) {
+                //performs the actions below after the field to add the count down number has been changed, including deleting a previous number
+                //on deleting a number the field is changed to null so the actions below are still performed
 
-                if(!isRunning){
-                millisLeft = 0
-                isRunning = false
-                txtViewCount.text = "" + timeInMillis / 1000
-                txtViewCountMinutes.text = "" + timeInMillis / 1000
-                pBar.progress = timeInMillis.toInt() + 0
-                pBar.max = timeInMillis.toInt() / 1000}
+                if (!isRunning) {
+                    millisLeft = 0
+                    isRunning = false
+                    txtViewCount.text = "" + timeInMillis / 1000
+                    txtViewCountMinutes.text = "" + timeInMillis / 1000
+                    pBar.progress = timeInMillis.toInt() + 0
+                    pBar.max = timeInMillis.toInt() / 1000
+                }
 
             }
         })
 
         imagePauseView.setOnClickListener {
-            count++
-            pauseCount++
+            //pauses the time
+            count++ //ensures that on starting the timer back up, that it resumes from the same time
             isPaused = true
             stop()
 
@@ -93,14 +93,14 @@ class CountDownActivity : AppCompatActivity() {
 
         imageViewPlayButton.setOnClickListener {
 
-            resetCount = 0
-            pauseCount = 0
-            startCount = 0
+            //starts the show and prevents a null pointer exception
+
+
             if (!isRunning) {
                 if (editTCount.text.toString().isEmpty()) {
                     Toast.makeText(this@CountDownActivity, "Enter number of minutes", Toast.LENGTH_LONG).show()
 
-                }else{
+                } else {
 
                     start()
                 }
@@ -112,8 +112,10 @@ class CountDownActivity : AppCompatActivity() {
         }
 
         imageViewReset.setOnClickListener {
+            //resets everything and activates reset boolean to true, to be checked in onFinish to prevent
+            // the end sound from chiming when a new number is placed in the editTcount text field
             stop()
-            millisLeft =0
+            millisLeft = 0
             isRunning = false
             imageViewPlayButton.setImageResource(R.drawable.ic_start)
             countDownTimer.cancel()
@@ -121,55 +123,63 @@ class CountDownActivity : AppCompatActivity() {
             txtViewCountMinutes.text = "" + timeInMillis / 1000
             pBar.progress = timeInMillis.toInt() + 0
             pBar.max = timeInMillis.toInt() / 1000
-            resetCount++
+            isReset = true
 
 
         }
     }
 
     private fun start() {
+        //starts everything and resets isPaused and isReset to false so that the sound will play when onFinish is activated
+
         val textInput = editTCount.text.toString()
         val timeInput = textInput.toLong() * 60 * 1000
         timeInMillis = timeInput
         pBar.max = timeInMillis.toInt() / 1000
-        pauseCount--
-        startCount++
+        isPaused = false
+        isReset = false
 
 
-
-
-        while(isPaused && count > 0){
+        while (isPaused && count > 0) {
+            //when paused and started again this ensures the timer starts from the time it was paused
             timeInMillis = millisLeft
             count--
 
 
-
         }
-
-
 
         imageViewPlayButton.setImageResource(R.drawable.ic_stop)
         isRunning = true
 
 
-        countDownTimer = object : CountDownTimer(timeInMillis, 100) {
+        countDownTimer = object : CountDownTimer(timeInMillis+1000, 100) {
             override fun onTick(millisUntilFinished: Long) {
+                //^^^this is the engine of the app, up top timeInMillis starts the time 1 second ahead^^^
+                // ^^^so 5:00 would be 4:59, 1000 is added to timeInMillis to compensate making it 5:00^^^
 
-
+                //VVV converts milliseconds in to seconds and minutes VVVV
 
                 val minutes = millisUntilFinished / 1000 / 60
                 val seconds = millisUntilFinished / 1000 % 60
+
+                //^converts milliseconds in to seconds and minutes^
+
+                //VVV shows the progress of time in circular progress bar and visual representation of the time VVV
 
                 txtViewCountMinutes.text = minutes.toString()
                 txtViewCount.text = seconds.toString()
                 pBar.progress = Math.round(millisUntilFinished * 0.001f)
                 millisLeft = millisUntilFinished
 
+                //^^^ shows the progress of time in circular progress bar and visual representation of the time ^^^
+
 
             }
 
+
             @SuppressLint("SetTextI18n")
             override fun onFinish() {
+                //finishes everything and changes the stop button view back into the play button view
                 imageViewPlayButton.setImageResource(R.drawable.ic_start)
                 isRunning = false
                 timeInMillis = 0
@@ -178,28 +188,30 @@ class CountDownActivity : AppCompatActivity() {
                 pBar.progress = timeInMillis.toInt() + 0
                 pBar.max = timeInMillis.toInt() / 1000
 
-                if (resetCount <= 0 && pauseCount <= 0){
-                    playSound()
-                    resetCount--
 
 
-                }
-
-
-
+                if (!isPaused||!isReset){
+                    //prevents the end chime from playing when the time is changed or reset
+                    // ensures it only plays once the timer reaches zero
+                    playSound()}
 
 
 
 
 
             }
+            //VVV starts everything, very important VVV
         }.start()
         countDownTimer.start()
+
+        //^^^ starts everything, very important ^^^
 
 
     }
 
     private fun stop() {
+        //stops everything and ensures isRunning is false
+
         imageViewPlayButton.setImageResource(R.drawable.ic_start)
         isRunning = false
         timeInMillis = 0
@@ -209,6 +221,7 @@ class CountDownActivity : AppCompatActivity() {
     }
 
     private fun playSound() {
+        // ensures a sound is played at the end of the count down
 
         val mp = MediaPlayer.create(this, R.raw.tone)
 
@@ -220,10 +233,9 @@ class CountDownActivity : AppCompatActivity() {
         super.onConfigurationChanged(newConfig)
         // When phone orientation changes this keeps the data the same
         // added the line android:configChanges="orientation|screenSize" to <activity android:name=".CountDownActivity" /> making it
-        //  <activity android:name=".CountDownActivity" android:configChanges="orientation|screenSize"/> in AndroidManifest.xml:
+        //  <activity android:name=".CountDownActivity" android:configChanges="orientation|screenSize"/> AndroidManifest.xml:
         // in order to get this to work
     }
-
 
 
 }

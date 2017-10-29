@@ -5,4 +5,11 @@
     <string name="press_to_start">Press to start</string>
     <string name="enter_seconds">Enter seconds</string>
     <string name="_00">00</string>
+    <string name="back_ground_image_of_a_tunnel">Back ground image of a tunnel</string>
+    <string name="this_timer_counts_down">This timer counts down</string>
+    <string name="enter_minutes">Enter minutes</string>
+    <string name="reset_button">RESET BUTTON</string>
+    <string name="this_button_starts_the_count_down_timer">This button starts the count down timer</string>
+    <string name="seperator">:</string>
+    <string name="pauses_the_count_down_timer">Pauses the count down timer</string>
 </resources>
