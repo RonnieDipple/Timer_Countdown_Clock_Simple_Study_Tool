@@ -63,6 +63,7 @@
         android:textColorLink="@android:color/black"
         android:textCursorDrawable="@null"
         android:textSize="30sp"
+        android:theme="@style/CustomEditTextTheme"
         tools:targetApi="lollipop" />
 
 
