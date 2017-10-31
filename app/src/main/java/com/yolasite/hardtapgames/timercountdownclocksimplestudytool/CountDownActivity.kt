@@ -2,7 +2,6 @@ package com.yolasite.hardtapgames.timercountdownclocksimplestudytool
 
 
 import android.annotation.SuppressLint
-import android.content.res.Configuration
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -12,6 +11,10 @@ import android.text.TextWatcher
 import android.view.Window
 import android.view.WindowManager
 import android.widget.*
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
+import com.kobakei.ratethisapp.RateThisApp
 
 
 class CountDownActivity : AppCompatActivity() {
@@ -31,17 +34,48 @@ class CountDownActivity : AppCompatActivity() {
     private var isRunning = false
     private var isReset = false
     private var isPaused = false
+    private var isOnFinish = false
     private var count = 0
+    private var startCount = 0
 
+    private lateinit var b2adView: AdView
 
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
 
+
         super.onCreate(savedInstanceState)
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         this.window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_count_down) //<-the main countdown view
+
+        //VVV this is the rate app pop up section VVVV
+
+        // Monitor launch times and interval from installation
+        RateThisApp.onStart(this)
+        // If the condition is satisfied, "Rate this app" dialog will be shown
+        val config = RateThisApp.Config(3, 1)
+        RateThisApp.showRateDialogIfNeeded(this)
+        config.setUrl("http://www.google.com")// <-- before launch change to app store location of app
+        RateThisApp.init(config)
+
+
+        //^^^ this is the rate app pop up section ^^^
+
+        //VVV adverts make sure the numbers are right before launch VVV
+
+
+        MobileAds.initialize(applicationContext,
+                "ca-app-pub-3940256099942544~3347511713") //<-- change before launch change
+
+        b2adView = findViewById(R.id.b2adView)
+        val adRequest = AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR).build()
+
+
+        b2adView.loadAd(adRequest)
+
+        //^^^ adverts make sure the numbers are right before launch ^^^
 
         pBar = findViewById(R.id.progressBar) //<- initialises the circular progress bar
         editTCount = findViewById(R.id.editTCount) //<- initialises the field to input the to count down
@@ -53,7 +87,7 @@ class CountDownActivity : AppCompatActivity() {
 
 
         editTCount.addTextChangedListener(object : TextWatcher {
-            // addTextChangedListener "listens" to see if text has been changed in the editTcound text field
+            // addTextChangedListener "listens" to see if text has been changed in the editTcount text field
             //TextWatcher then acts based on the text before it was change, during the change and after the change
             //afterTextChanged is the only field where you can  edit the text and actions of the editTcount view
 
@@ -108,6 +142,7 @@ class CountDownActivity : AppCompatActivity() {
 
                 stop()
 
+
             }
         }
 
@@ -127,6 +162,7 @@ class CountDownActivity : AppCompatActivity() {
 
 
         }
+
     }
 
     private fun start() {
@@ -138,6 +174,10 @@ class CountDownActivity : AppCompatActivity() {
         pBar.max = timeInMillis.toInt() / 1000
         isPaused = false
         isReset = false
+        startCount++
+
+
+
 
 
         while (isPaused && count > 0) {
@@ -152,7 +192,7 @@ class CountDownActivity : AppCompatActivity() {
         isRunning = true
 
 
-        countDownTimer = object : CountDownTimer(timeInMillis+1000, 100) {
+        countDownTimer = object : CountDownTimer(timeInMillis + 1000, 100) {
             override fun onTick(millisUntilFinished: Long) {
                 //^^^this is the engine of the app, up top timeInMillis starts the time 1 second ahead^^^
                 // ^^^so 5:00 would be 4:59, 1000 is added to timeInMillis to compensate making it 5:00^^^
@@ -187,19 +227,21 @@ class CountDownActivity : AppCompatActivity() {
                 txtViewCountMinutes.text = "" + timeInMillis
                 pBar.progress = timeInMillis.toInt() + 0
                 pBar.max = timeInMillis.toInt() / 1000
+                isOnFinish = true
+
+                if (!isPaused || !isReset) {
+                    playSound()
 
 
-
-                if (!isPaused||!isReset){
                     //prevents the end chime from playing when the time is changed or reset
                     // ensures it only plays once the timer reaches zero
-                    playSound()}
 
 
-
+                }
 
 
             }
+
             //VVV starts everything, very important VVV
         }.start()
         countDownTimer.start()
@@ -210,6 +252,7 @@ class CountDownActivity : AppCompatActivity() {
     }
 
     private fun stop() {
+
         //stops everything and ensures isRunning is false
 
         imageViewPlayButton.setImageResource(R.drawable.ic_start)
@@ -227,18 +270,9 @@ class CountDownActivity : AppCompatActivity() {
 
         mp.start()
 
-    }
 
-    override fun onConfigurationChanged(newConfig: Configuration) {
-        super.onConfigurationChanged(newConfig)
-        // When phone orientation changes this keeps the data the same
-        // added the line android:configChanges="orientation|screenSize" to <activity android:name=".CountDownActivity" /> making it
-        //  <activity android:name=".CountDownActivity" android:configChanges="orientation|screenSize"/> AndroidManifest.xml:
-        // in order to get this to work
     }
 
 
 }
-
-
 
