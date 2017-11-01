@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">计时器倒计时时钟：简单的学习工具</string>
+    <string name="welcome">欢迎</string>
+    <string name="press_to_start">按开始</string>
+    <string name="enter_minutes">输入分钟</string>
+    <string name="Enter_number_of_minutes">输入分钟数</string>
+</resources>

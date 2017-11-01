@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">تایمر شمارش معکوس ساعت ساده ابزار مطالعه</string>
+    <string name="welcome">خوش آمدی</string>
+    <string name="press_to_start">برای شروع شروع کنید</string>
+    <string name="enter_minutes">دقیقه را وارد کنید</string>
+    <string name="Enter_number_of_minutes">تعداد دقیقه ها را وارد کنید</string>
+</resources>

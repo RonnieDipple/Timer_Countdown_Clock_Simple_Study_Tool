@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ქრონომეტრაჟის საათი: მარტივი სასწავლო საშუალება</string>
+    <string name="welcome">გამარჯობა</string>
+    <string name="press_to_start">პრესის დასაწყებად</string>
+    <string name="enter_minutes">შეიყვანეთ წუთი</string>
+</resources>

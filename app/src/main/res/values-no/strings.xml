@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Timer nedtelling klokke: enkelt studieverktøy</string>
+    <string name="welcome">Velkommen</string>
+    <string name="press_to_start">Trykk for å starte</string>
+    <string name="enter_minutes">Skriv inn minutter</string>
+    <string name="Enter_number_of_minutes">Skriv inn minutter</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Timer countdown clock: เครื่องมือการศึกษาแบบง่ายๆ</string>
+    <string name="welcome">ยินดีต้อนรับ</string>
+    <string name="press_to_start">กดเพื่อเริ่มต้น</string>
+    <string name="enter_minutes">ป้อนนาที</string>
+    <string name="Enter_number_of_minutes">ป้อนจำนวนนาที</string>
+</resources>

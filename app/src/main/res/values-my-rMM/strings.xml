@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">"timer နှစ်သစ်ကြိုဆိုပွဲနာရီ: ရိုးရှင်းသောလေ့လာမှု tool ကို "</string>
+    <string name="welcome">" ဟလို"</string>
+    <string name="press_to_start">start ကိုနှိပ်ပါ</string>
+    <string name="enter_minutes">မိနစ် Enter</string>
+</resources>

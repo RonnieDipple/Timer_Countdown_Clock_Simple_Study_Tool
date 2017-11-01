@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Relógio de contagem regressiva do temporizador: ferramenta de estudo simples</string>
+    <string name="welcome">Bem-vindo</string>
+    <string name="press_to_start">Pressione para iniciar</string>
+    <string name="enter_minutes">Digite minutos</string>
+    <string name="Enter_number_of_minutes">Digite o número de minutos</string>
+</resources>

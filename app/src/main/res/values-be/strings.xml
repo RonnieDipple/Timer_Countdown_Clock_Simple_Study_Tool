@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Таймер зваротнага адліку: просты інструмент даследаванні</string>
+    <string name="welcome">Welcome</string>
+    <string name="press_to_start">Націсніце для запуску</string>
+    <string name="enter_minutes">Enter хвілін</string>
+</resources>

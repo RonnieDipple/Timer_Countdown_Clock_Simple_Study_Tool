@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Тоолуур тоолох цаг: энгийн судалгааны хэрэгсэл</string>
+    <string name="welcome">Тавтай морилно уу</string>
+    <string name="press_to_start">Эхлүүлэхийн тулд дарна уу</string>
+    <string name="enter_minutes">минутыг оруулаарай</string>
+    <string name="Enter_number_of_minutes">минутын тоог оруулна уу</string>
+</resources>

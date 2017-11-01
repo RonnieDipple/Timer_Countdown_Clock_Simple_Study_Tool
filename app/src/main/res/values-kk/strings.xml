@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Таймердің кері санағы: қарапайым оқу құралы</string>
+    <string name="welcome">қош келдіңіздер</string>
+    <string name="press_to_start">басу үшін басу</string>
+    <string name="enter_minutes">минутты енгізу</string>
+    <string name="Enter_number_of_minutes">минуттың санын енгізіңіз</string>
+</resources>

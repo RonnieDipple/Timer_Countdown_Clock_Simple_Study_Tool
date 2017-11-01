@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Timer countdown clock: strumento di studio semplice</string>
+    <string name="welcome">Welcome</string>
+    <string name="press_to_start">Premere per iniziare</string>
+    <string name="enter_minutes">Inserisci minuti</string>
+</resources>

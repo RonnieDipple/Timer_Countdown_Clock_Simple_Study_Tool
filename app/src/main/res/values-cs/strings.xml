@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hodiny odpočítávání času: jednoduchý studijní nástroj</string>
+    <string name="welcome">Vítejte</string>
+    <string name="press_to_start">Stisknutím spustíte</string>
+    <string name="enter_minutes">Zadejte minuty</string>
+    <string name="Enter_number_of_minutes">Zadejte počet minut</string>
+</resources>

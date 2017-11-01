@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">టైమర్ కౌంట్డౌన్ గడియారం: సాధారణ అధ్యయనం సాధనం</string>
+    <string name="welcome">స్వాగతం</string>
+    <string name="press_to_start">ప్రెస్ ప్రారంభం</string>
+    <string name="enter_minutes">నిమిషాల ఎంటర్</string>
+    <string name="Enter_number_of_minutes">నిమిషాల సంఖ్య నమోదు</string>
+</resources>

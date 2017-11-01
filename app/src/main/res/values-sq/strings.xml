@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">" Ora e numërimit timer: mjet i thjeshtë i studimit"</string>
+    <string name="welcome">Mirë se vini</string>
+    <string name="press_to_start">"Shtypni për të filluar "</string>
+    <string name="enter_minutes">Futni minuta</string>
+    <string name="Enter_number_of_minutes">Futni numrin e minutave</string>
+</resources>

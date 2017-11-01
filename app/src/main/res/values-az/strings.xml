@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">"Timer hesablama saatı: sadə iş aləti "</string>
+    <string name="welcome">Xoş gəldiniz</string>
+    <string name="press_to_start">Başlamaq üçün basın</string>
+    <string name="enter_minutes">Minimal hesabla daxil et</string>
+</resources>

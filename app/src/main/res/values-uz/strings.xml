@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">taymerni qayta hisoblash vaqti: oddiy ish vositasi</string>
+    <string name="welcome">xush kelibsiz</string>
+    <string name="press_to_start">boshlashni boshlash</string>
+    <string name="enter_minutes">daqiqalarni kiritish</string>
+    <string name="Enter_number_of_minutes">daqiqalarning sonini kiriting</string>
+</resources>

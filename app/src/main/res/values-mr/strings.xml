@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">टाइमर काउंटडाउन घड्याळ: साधे अभ्यास साधन</string>
+    <string name="welcome">वेलकम</string>
+    <string name="press_to_start">सुरू करण्यासाठी दाबा</string>
+    <string name="enter_minutes">प्रविष्ट मिनिटे</string>
+    <string name="Enter_number_of_minutes">मिनिटे नंबर प्रविष्ट करा</string>
+</resources>

@@ -38,6 +38,7 @@ class CountDownActivity : AppCompatActivity() {
     private var count = 0
     private var startCount = 0
 
+
     private lateinit var b2adView: AdView
 
 
@@ -132,7 +133,7 @@ class CountDownActivity : AppCompatActivity() {
 
             if (!isRunning) {
                 if (editTCount.text.toString().isEmpty()) {
-                    Toast.makeText(this@CountDownActivity, "Enter number of minutes", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@CountDownActivity, R.string.Enter_number_of_minutes, Toast.LENGTH_LONG).show()
 
                 } else {
 

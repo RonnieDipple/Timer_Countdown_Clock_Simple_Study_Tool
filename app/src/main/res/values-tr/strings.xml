@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Zamanlayıcı geri sayım saati: basit çalışma aracı</string>
+    <string name="welcome">Karşılama</string>
+    <string name="press_to_start">Başlatmak için basmak</string>
+    <string name="enter_minutes">dakika girişi</string>
+    <string name="Enter_number_of_minutes">dakika sayısını girin</string>
+</resources>

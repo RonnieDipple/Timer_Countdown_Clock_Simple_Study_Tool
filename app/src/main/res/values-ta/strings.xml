@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">டைமர் கவுண்ட்டவுன் கடிகாரம்: எளிய ஆய்வு கருவி</string>
+    <string name="welcome">வரவேற்பு</string>
+    <string name="press_to_start">துவக்க அழுத்தவும்</string>
+    <string name="enter_minutes">நிமிடங்கள் சேர்க்கவும்</string>
+    <string name="Enter_number_of_minutes">நிமிடங்கள் எண்ணிக்கை உள்ளிடவும்</string>
+</resources>

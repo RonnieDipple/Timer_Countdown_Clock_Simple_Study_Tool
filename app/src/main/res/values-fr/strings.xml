@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Compte à rebours de la minuterie: simple outil d\'étude</string>
+    <string name="welcome">Bienvenue</string>
+    <string name="press_to_start">Appuyer pour démarrer</string>
+    <string name="enter_minutes">Entrer les minutes</string>
+</resources>

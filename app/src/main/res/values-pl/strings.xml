@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Timer odliczanie zegara: proste narzędzie do nauki</string>
+    <string name="welcome">Witamy</string>
+    <string name="enter_minutes">Wprowadzić minuty</string>
+    <string name="Enter_number_of_minutes">Wprowadzić liczbę minut</string>
+</resources>

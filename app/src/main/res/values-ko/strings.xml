@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">타이머 카운트 다운 시계 : 간단한 학습 도구</string>
+    <string name="welcome">시작</string>
+    <string name="press_to_start">시작하려면 누르기</string>
+    <string name="enter_minutes">분 입력</string>
+    <string name="Enter_number_of_minutes">분 입력</string>
+</resources>

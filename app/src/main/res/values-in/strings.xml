@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Timer hitung mundur: alat belajar sederhana</string>
+    <string name="welcome">Selamat Datang</string>
+    <string name="press_to_start">Tekan untuk memulai</string>
+    <string name="enter_minutes">Masukkan menit</string>
+</resources>

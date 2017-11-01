@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">otomatis mundur jam: basajan alat ulikan</string>
+    <string name="welcome">Wilujeng sumping</string>
+    <string name="press_to_start">Pencét ngamimitian</string>
+    <string name="enter_minutes">asupkeun menit</string>
+    <string name="Enter_number_of_minutes">Lebetkeun Jumlah menit</string>
+</resources>

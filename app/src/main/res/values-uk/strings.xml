@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Таймер таймер зворотного відліку: простий інструмент дослідження</string>
+    <string name="welcome">Ласкаво просимо</string>
+    <string name="press_to_start">Натисніть, щоб почати</string>
+    <string name="enter_minutes">Введіть хвилини</string>
+</resources>

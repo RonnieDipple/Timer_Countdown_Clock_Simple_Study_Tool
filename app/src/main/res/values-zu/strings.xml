@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Timer countdown clock : simple study tool</string>
+    <string name="welcome">Siyakwamukela</string>
+    <string name="press_to_start">Cindezela ukuqala</string>
+    <string name="enter_minutes">Faka amaminithi</string>
+    <string name="Enter_number_of_minutes">Faka inombolo yamaminithi</string>
+</resources>

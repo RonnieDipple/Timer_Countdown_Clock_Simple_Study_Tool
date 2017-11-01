@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ajastimen lähtölaskenta kello: yksinkertainen työkalu</string>
+    <string name="welcome">Tervetuloa</string>
+    <string name="press_to_start">Aloita painamalla</string>
+    <string name="enter_minutes">Anna minuutit</string>
+</resources>

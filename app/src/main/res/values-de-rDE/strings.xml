@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Timer-Countdown-Uhr: einfaches Lernprogramm</string>
+    <string name="welcome">Willkommen</string>
+    <string name="press_to_start">Zum Starten drücken</string>
+    <string name="enter_minutes">Minuten eingeben</string>
+</resources>

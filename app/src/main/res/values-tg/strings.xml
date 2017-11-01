@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Вақти задашуда: соати омӯзиши оддӣ</string>
+    <string name="welcome">Ба навсозӣ</string>
+    <string name="press_to_start">Барои оғоз кардани</string>
+    <string name="enter_minutes">дақиқа ворид кунед</string>
+    <string name="Enter_number_of_minutes">Рақами дақиқаро ворид кунед</string>
+</resources>

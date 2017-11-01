@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Таймер обратного отсчета таймера: инструмент простого изучения</string>
+    <string name="welcome">Приветствие</string>
+    <string name="press_to_start">Нажмите, чтобы начать</string>
+    <string name="enter_minutes">Ввод минут</string>
+    <string name="Enter_number_of_minutes">Введите количество минут</string>
+</resources>

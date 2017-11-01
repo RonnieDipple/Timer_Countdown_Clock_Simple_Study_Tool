@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Часовник за обратно броене: прост инструмент за проучване</string>
+    <string name="welcome">Добре дошъл</string>
+    <string name="press_to_start">Натиснете, за да започнете</string>
+    <string name="enter_minutes">Въведете минути</string>
+</resources>

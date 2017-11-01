@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ടൈമർ കൗണ്ട്ഡൗൺ ക്ലോക്ക്: ലളിതമായ പഠനം ഉപകരണം</string>
+    <string name="welcome">സ്വാഗതം</string>
+    <string name="press_to_start">അമർത്തുക ആരംഭിക്കുക</string>
+    <string name="enter_minutes">മിനിറ്റ് നൽകുക</string>
+    <string name="Enter_number_of_minutes">മിനിറ്റ് നമ്പർ നൽകുക</string>
+</resources>

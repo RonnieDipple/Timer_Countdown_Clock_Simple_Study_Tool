@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ura za odštevanje časa: enostavno učno orodje</string>
+    <string name="welcome">Dobrodošli</string>
+    <string name="press_to_start">Pritisnite za začetek</string>
+    <string name="enter_minutes">Vnesite minute</string>
+    <string name="Enter_number_of_minutes">Vnesite število minut</string>
+</resources>

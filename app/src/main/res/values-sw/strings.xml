@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Saa ya kuhesabu ya saa: chombo rahisi cha kusoma</string>
+    <string name="welcome">Karibu</string>
+    <string name="press_to_start">Vyombo vya habari kuanza</string>
+    <string name="enter_minutes">Ingiza dakika</string>
+    <string name="Enter_number_of_minutes">Ingiza idadi ya dakika</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Тајмер одбројување часовник: едноставна алатка за проучување</string>
+    <string name="welcome">Добредојдовте</string>
+    <string name="press_to_start">Притиснете за да започнете</string>
+    <string name="enter_minutes">Внесете минути</string>
+    <string name="Enter_number_of_minutes">Внесете број минути</string>
+</resources>

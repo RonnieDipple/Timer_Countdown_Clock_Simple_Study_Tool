@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome">Maligayang pagdating</string>
+    <string name="press_to_start">Pindutin upang simulan</string>
+    <string name="enter_minutes">Ipasok ang mga minuto</string>
+</resources>

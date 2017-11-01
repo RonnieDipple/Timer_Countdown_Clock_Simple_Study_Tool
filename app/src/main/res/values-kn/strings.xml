@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ಟೈಮರ್ ಕೌಂಟ್ಡೌನ್ ಗಡಿಯಾರ: ಸರಳ ಅಧ್ಯಯನ ಸಾಧನ</string>
+    <string name="welcome">ಸ್ವಾಗತ</string>
+    <string name="press_to_start">ಪ್ರಾರಂಭಿಸಲು ಪ್ರೆಸ್</string>
+    <string name="enter_minutes">ನಿಮಿಷಗಳನ್ನು ನಮೂದಿಸಿ</string>
+    <string name="Enter_number_of_minutes">ನಿಮಿಷಗಳ ಸಂಖ್ಯೆ ನಮೂದಿಸಿ</string>
+</resources>

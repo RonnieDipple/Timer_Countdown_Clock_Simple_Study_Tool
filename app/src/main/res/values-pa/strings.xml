@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ਟਾਈਮਰ ਕਾਊਂਟੌਨ ਘੜੀ: ਸਧਾਰਨ ਅਧਿਐਨ ਸੰਦ</string>
+    <string name="welcome">ਸਵਾਗਤ ਕਰੋ</string>
+    <string name="press_to_start">ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਪ੍ਰੈੱਸ ਕਰੋ</string>
+    <string name="enter_minutes">ਮਿੰਟਾਂ ਦੀ ਗਿਣਤੀ ਦਰਜ ਕਰੋ</string>
+    <string name="Enter_number_of_minutes">ਮਿੰਟਾਂ ਦੀ ਗਿਣਤੀ ਦਰਜ ਕਰੋ</string>
+</resources>

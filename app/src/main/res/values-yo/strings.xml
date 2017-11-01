@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aago kika aago timer: rọrun iwadi ọpa</string>
+    <string name="welcome">Kaabo</string>
+    <string name="press_to_start">Tẹ lati bẹrẹ</string>
+    <string name="enter_minutes">Tẹ awọn iṣẹju sii</string>
+    <string name="Enter_number_of_minutes">Tẹ nọmba ti awọn iṣẹju</string>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Időzítő visszaszámláló óra: egyszerű tanulási eszköz</string>
+    <string name="welcome">Üdvözöljük</string>
+    <string name="press_to_start">Nyomja meg a startot</string>
+    <string name="enter_minutes">Adja meg a perceket</string>
+</resources>

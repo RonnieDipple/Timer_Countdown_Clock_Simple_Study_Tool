@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ટાઈમર કાઉન્ટડાઉન ઘડિયાળ: સરળ અભ્યાસ સાધન</string>
+    <string name="welcome">સ્વાગત</string>
+    <string name="press_to_start">શરૂ કરવા માટે દબાવો</string>
+    <string name="enter_minutes">મિનિટ દાખલ</string>
+    <string name="Enter_number_of_minutes">મિનિટ સંખ્યા દાખલ કરો</string>
+</resources>

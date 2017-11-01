@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ٹائمر گنتی گھڑی: سادہ مطالعہ کے آلے</string>
+    <string name="welcome">خوش آمدید</string>
+    <string name="press_to_start">شروع کرنے کے لئے دبائیں</string>
+    <string name="enter_minutes">منٹ درج کریں</string>
+    <string name="Enter_number_of_minutes">منٹ کی تعداد درج کریں</string>
+</resources>

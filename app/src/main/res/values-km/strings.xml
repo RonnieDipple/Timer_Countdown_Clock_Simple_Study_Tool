@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">នាឡិការាប់ថយក្រោយ: ឧបករណ៍សិក្សាសាមញ្</string>
+    <string name="welcome">សូមស្វាគមន៍</string>
+    <string name="press_to_start">ចុចដើម្បីចាប់ផ្តើម</string>
+    <string name="enter_minutes">បញ្ចូលនាទី</string>
+    <string name="Enter_number_of_minutes">បញ្ចូលលេខនាទី</string>
+</resources>

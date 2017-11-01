@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">टाइमर काउन्टीडाउन घडी: साधारण अध्ययन उपकरण</string>
+    <string name="welcome">स्वागत</string>
+    <string name="press_to_start">शुरु गर्नका लागि प्रेस</string>
+    <string name="enter_minutes">इन्टर मिनेट</string>
+    <string name="Enter_number_of_minutes">मिनेटको संख्या प्रविष्ट गर्नुहोस्</string>
+</resources>

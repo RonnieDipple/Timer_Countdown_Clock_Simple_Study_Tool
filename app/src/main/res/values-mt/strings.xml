@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Timer countdown clock: għodda ta \'studju sempliċi</string>
+    <string name="welcome">Merħba</string>
+    <string name="press_to_start">Agħfas biex tibda</string>
+    <string name="enter_minutes">Daħħal il-minuti</string>
+</resources>

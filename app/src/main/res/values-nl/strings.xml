@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Timer aftellen klok: eenvoudige studie tool</string>
+    <string name="welcome">Welkom</string>
+    <string name="press_to_start">Druk om te beginnen</string>
+    <string name="enter_minutes">Enter minuten</string>
+</resources>

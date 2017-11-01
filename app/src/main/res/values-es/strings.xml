@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Reloj temporizador: herramienta de estudio simple</string>
+    <string name="welcome">Bienvenido</string>
+    <string name="press_to_start">Presione para comenzar</string>
+    <string name="enter_minutes">Introduzca minutos</string>
+    <string name="Enter_number_of_minutes">Introduzca el número de minutos</string>
+</resources>

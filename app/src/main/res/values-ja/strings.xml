@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">タイマーカウントダウンクロック：簡易学習ツール</string>
+    <string name="welcome">ウェルカム</string>
+    <string name="press_to_start">開始するには</string>
+    <string name="enter_minutes">分を入力する</string>
+    <string name="Enter_number_of_minutes">分を入力する</string>
+</resources>

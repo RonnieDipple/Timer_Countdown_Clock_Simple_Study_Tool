@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">"Reloxo de conta atrás do temporizador: ferramenta de estudo simple "</string>
+    <string name="welcome">Benvido</string>
+    <string name="press_to_start">Prema para iniciar</string>
+    <string name="enter_minutes">Introducir minutos</string>
+</resources>

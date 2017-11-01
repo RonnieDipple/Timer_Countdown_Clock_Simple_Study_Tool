@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">טיימר שעון ספירה: כלי לימוד פשוט</string>
+    <string name="welcome">ברוך הבא</string>
+    <string name="press_to_start">לחץ על כדי להתחיל</string>
+    <string name="enter_minutes">הזן דקות</string>
+    <string name="Enter_number_of_minutes">הזן מספר דקות</string>
+</resources>

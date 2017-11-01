@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">tawqit aleadi altnazly: dirasatan basitatan</string>
+    <string name="welcome">\'ahlaan bik</string>
+    <string name="press_to_start">adghat libad\'</string>
+    <string name="enter_minutes">\'udkhul daqayiq</string>
+    <string name="Enter_number_of_minutes">\'udkhul eadad aldaqayiq</string>
+</resources>

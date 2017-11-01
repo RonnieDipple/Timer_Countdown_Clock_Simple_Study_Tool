@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Taimera atpakaļskaitīšanas pulkstenis: vienkāršs pētījuma rīks</string>
+    <string name="welcome">Labdien</string>
+    <string name="press_to_start">Nospiediet, lai sāktu</string>
+    <string name="enter_minutes">Ievadiet minūtes</string>
+    <string name="Enter_number_of_minutes">Ievadiet minūšu skaitu</string>
+</resources>

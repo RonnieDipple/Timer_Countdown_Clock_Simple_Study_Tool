@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Famantaram-potoana fandoavam-potoana: fitaovana fianarana tsotra</string>
+    <string name="welcome">Welcome</string>
+    <string name="press_to_start">Mandrosoa aloha</string>
+    <string name="enter_minutes">Karohy minitra</string>
+    <string name="pauses_the_count_down_timer">Midira ny isa minitra</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cronometrul de numărătoare inversă: instrument de studiu simplu</string>
+    <string name="welcome">Bine ați venit</string>
+    <string name="press_to_start">Apăsați pentru a începe</string>
+    <string name="enter_minutes">Introduceți minutele</string>
+    <string name="Enter_number_of_minutes">Introduceți numărul de minute</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">đồng hồ đếm ngược thời gian: công cụ nghiên cứu đơn giản</string>
+    <string name="welcome">chào mừng</string>
+    <string name="press_to_start">nhấn để bắt đầu</string>
+    <string name="enter_minutes">nhập phút</string>
+    <string name="Enter_number_of_minutes">nhập số phút</string>
+</resources>

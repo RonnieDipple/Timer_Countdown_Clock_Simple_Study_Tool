@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ρολόι αντίστροφου χρονομέτρου: απλό εργαλείο μελέτης</string>
+    <string name="welcome">Καλώς ήλθατε</string>
+    <string name="press_to_start">Πατήστε για να ξεκινήσετε</string>
+    <string name="enter_minutes">Εισάγετε λεπτά</string>
+</resources>

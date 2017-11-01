@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Laikmačio atgalinės atskaitos laikrodis: paprastas tyrimo įrankis</string>
+    <string name="welcome">Sveiki,</string>
+    <string name="press_to_start">Spaudžiant, norint pradėti</string>
+    <string name="enter_minutes">Įvesti minutes</string>
+    <string name="Enter_number_of_minutes">Įrašyti minučių skaičių</string>
+</resources>

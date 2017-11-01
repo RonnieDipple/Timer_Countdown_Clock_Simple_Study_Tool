@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Taimeri loendur kella: lihtne uuringu tööriist</string>
+    <string name="welcome">Tervitus</string>
+    <string name="press_to_start">Vajutage, et alustada</string>
+    <string name="enter_minutes">Sisesta minut</string>
+</resources>

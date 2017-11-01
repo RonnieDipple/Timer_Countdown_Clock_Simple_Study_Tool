@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cloc countdown amserydd: offeryn syml</string>
+    <string name="welcome">Welcome</string>
+    <string name="press_to_start">Dechreuwch i gychwyn</string>
+    <string name="enter_minutes">Rhowch funudau</string>
+    <string name="Enter_number_of_minutes">Rhowch nifer o gofnodion</string>
+</resources>

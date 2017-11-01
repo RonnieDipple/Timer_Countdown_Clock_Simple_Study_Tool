@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Timer nedtælling ur: simple studieværktøj</string>
+    <string name="welcome">Velkommen</string>
+    <string name="press_to_start">Tryk for at starte</string>
+    <string name="enter_minutes">Indtast minutter</string>
+</resources>

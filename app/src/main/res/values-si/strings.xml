@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ටයිමර් ගණන් කිරීමේ ඔරලෝසුව: සරල අධ්යයන මෙවලමක්</string>
+    <string name="welcome">ඇඩෝබි ලෙස</string>
+    <string name="press_to_start">ආරම්භ කිරීමට ක්ලික් කරන්න</string>
+    <string name="enter_minutes">විනාඩි ඇතුල් කරන්න</string>
+    <string name="Enter_number_of_minutes">විනාඩි ගණන ඇතුලත් කරන්න</string>
+</resources>

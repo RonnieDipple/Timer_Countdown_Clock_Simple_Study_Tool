@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">टाइमर उलटी गिनती घड़ी: साधारण अध्ययन उपकरण</string>
+    <string name="welcome">वेलकम</string>
+    <string name="press_to_start">प्रेस शुरू करने के लिए</string>
+    <string name="enter_minutes">दर्ज करें मिनट</string>
+    <string name="Enter_number_of_minutes">मिनटों की संख्या दर्ज करें</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">"Clog countdown timer: uirlis staidéir simplí "</string>
+    <string name="welcome">Fáilte</string>
+    <string name="press_to_start">Brúigh chun tús</string>
+    <string name="enter_minutes">Cuir isteach nóiméad</string>
+    <string name="Enter_number_of_minutes">Cuir isteach líon na n-nóiméad</string>
+</resources>
