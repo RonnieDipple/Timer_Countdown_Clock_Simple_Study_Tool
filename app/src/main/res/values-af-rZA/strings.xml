@@ -5,4 +5,5 @@
     <string name="welcome">Welkom</string>
     <string name="Enter_number_of_minutes">Enter aantal minute</string>
     <string name="enter_minutes">Voeg minute</string>
+    <string name="Enter_number_and_press_the_play_button">Voer nommer in en druk die speelknoppie</string>
 </resources>

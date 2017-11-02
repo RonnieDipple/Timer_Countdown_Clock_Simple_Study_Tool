@@ -5,4 +5,5 @@
     <string name="press_to_start">nhấn để bắt đầu</string>
     <string name="enter_minutes">nhập phút</string>
     <string name="Enter_number_of_minutes">nhập số phút</string>
+    <string name="Enter_number_and_press_the_play_button">Nhập số và nhấn nút phát</string>
 </resources>

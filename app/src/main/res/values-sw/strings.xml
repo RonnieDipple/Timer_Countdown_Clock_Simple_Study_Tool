@@ -5,4 +5,5 @@
     <string name="press_to_start">Vyombo vya habari kuanza</string>
     <string name="enter_minutes">Ingiza dakika</string>
     <string name="Enter_number_of_minutes">Ingiza idadi ya dakika</string>
+    <string name="Enter_number_and_press_the_play_button">Ingiza namba na bonyeza kitufe cha kucheza</string>
 </resources>

@@ -5,4 +5,5 @@
     <string name="press_to_start">برای شروع شروع کنید</string>
     <string name="enter_minutes">دقیقه را وارد کنید</string>
     <string name="Enter_number_of_minutes">تعداد دقیقه ها را وارد کنید</string>
+    <string name="Enter_number_and_press_the_play_button">شماره را وارد کنید و دکمه پخش را فشار دهید</string>
 </resources>

@@ -36,6 +36,8 @@ class CountDownActivity : AppCompatActivity() {
     private var isPaused = false
     private var isOnFinish = false
     private var count = 0
+    private var startCount = 0
+
 
 
 
@@ -105,6 +107,7 @@ class CountDownActivity : AppCompatActivity() {
             }
 
             override fun afterTextChanged(s: Editable) {
+
                 //performs the actions below after the field to add the count down number has been changed, including deleting a previous number
                 //on deleting a number the field is changed to null so the actions below are still performed
 
@@ -125,18 +128,18 @@ class CountDownActivity : AppCompatActivity() {
             if (!isRunning) {
 
 
-                if (editTCount.text.toString().isEmpty()) {
-                    Toast.makeText(this@CountDownActivity, R.string.Enter_number_of_minutes, Toast.LENGTH_LONG).show()
+                if (editTCount.text.toString().isEmpty()|| editTCount.text.toString().isNotEmpty()) { //editTCount.text.toString().isNotEmpty() will need it's own if statement and toast plus numerous language translations for when people hit stop and pause
+                    Toast.makeText(this@CountDownActivity, getString(R.string.Enter_number_and_press_the_play_button), Toast.LENGTH_LONG).show()
 
                 }
 
 
-
-            }else{
+            } else {
                 //pauses the time
                 count++ //ensures that on starting the timer back up, that it resumes from the same time
                 isPaused = true
                 isRunning = false
+
                 stop()
             }
 
@@ -145,12 +148,13 @@ class CountDownActivity : AppCompatActivity() {
 
         imageViewPlayButton.setOnClickListener {
 
+
             //starts the show and prevents a null pointer exception
 
 
             if (!isRunning) {
                 if (editTCount.text.toString().isEmpty()) {
-                    Toast.makeText(this@CountDownActivity, R.string.Enter_number_of_minutes, Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@CountDownActivity, getString(R.string.Enter_number_and_press_the_play_button), Toast.LENGTH_LONG).show()
 
                 } else {
 
@@ -168,24 +172,22 @@ class CountDownActivity : AppCompatActivity() {
             //resets everything and activates reset boolean to true, to be checked in onFinish to prevent
             // the end sound from chiming when a new number is placed in the editTcount text field
 
-            if (!isRunning && (editTCount.text.toString().isEmpty())) {
+            if (!isRunning && (editTCount.text.toString().isEmpty()) || startCount == 0 && editTCount.text.toString().isNotEmpty()) {
 
-                Toast.makeText(this@CountDownActivity, R.string.Enter_number_of_minutes, Toast.LENGTH_LONG).show()
-
-
+                Toast.makeText(this@CountDownActivity, getString(R.string.Enter_number_and_press_the_play_button), Toast.LENGTH_LONG).show()
 
 
-            }else {
+            } else if (isRunning || isPaused || !isRunning) {
+
                 millisLeft = 0
                 imageViewPlayButton.setImageResource(R.drawable.ic_start)
-                countDownTimer.cancel()
                 txtViewCount.text = "" + 0 + 0
                 txtViewCountMinutes.text = "" + 0 + 0
                 pBar.progress = timeInMillis.toInt() + 0
                 pBar.max = timeInMillis.toInt() / 1000
                 isReset = true
-                isRunning = false
                 isPaused = false
+                startCount --
                 stop()
             }
 
@@ -195,13 +197,16 @@ class CountDownActivity : AppCompatActivity() {
     }
 
     private fun start() {
-        //starts everything and resets isPaused and isReset to false so that the sound will play when onFinish is activated
 
+
+        //starts everything and resets isPaused and isReset to false so that the sound will play when onFinish is activated
         val textInput = editTCount.text.toString()
         val timeInput = textInput.toLong() * 60 * 1000
         timeInMillis = timeInput
         pBar.max = timeInMillis.toInt() / 1000
         isPaused = false
+        startCount++
+
 
 
 

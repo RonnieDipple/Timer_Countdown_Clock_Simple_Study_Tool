@@ -5,4 +5,5 @@
     <string name="press_to_start">Brúigh chun tús</string>
     <string name="enter_minutes">Cuir isteach nóiméad</string>
     <string name="Enter_number_of_minutes">Cuir isteach líon na n-nóiméad</string>
+    <string name="Enter_number_and_press_the_play_button">Cuir isteach uimhir agus brúigh an cnaipe dráma</string>
 </resources>

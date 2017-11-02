@@ -5,4 +5,5 @@
     <string name="press_to_start">അമർത്തുക ആരംഭിക്കുക</string>
     <string name="enter_minutes">മിനിറ്റ് നൽകുക</string>
     <string name="Enter_number_of_minutes">മിനിറ്റ് നമ്പർ നൽകുക</string>
+    <string name="Enter_number_and_press_the_play_button">നമ്പർ നൽകുക, പ്ലേ ബട്ടൺ അമർത്തുക</string>
 </resources>

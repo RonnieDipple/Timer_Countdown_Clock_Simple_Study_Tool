@@ -5,4 +5,5 @@
     <string name="press_to_start">प्रेस शुरू करने के लिए</string>
     <string name="enter_minutes">दर्ज करें मिनट</string>
     <string name="Enter_number_of_minutes">मिनटों की संख्या दर्ज करें</string>
+    <string name="Enter_number_and_press_the_play_button">नंबर दर्ज करें और प्ले बटन दबाएं</string>
 </resources>

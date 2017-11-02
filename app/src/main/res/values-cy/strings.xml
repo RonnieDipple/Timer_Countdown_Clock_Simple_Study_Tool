@@ -5,4 +5,5 @@
     <string name="press_to_start">Dechreuwch i gychwyn</string>
     <string name="enter_minutes">Rhowch funudau</string>
     <string name="Enter_number_of_minutes">Rhowch nifer o gofnodion</string>
+    <string name="Enter_number_and_press_the_play_button">Rhowch rif a gwasgwch y botwm chwarae</string>
 </resources>

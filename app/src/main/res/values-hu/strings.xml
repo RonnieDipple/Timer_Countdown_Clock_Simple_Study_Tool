@@ -5,4 +5,5 @@
     <string name="press_to_start">Nyomja meg a startot</string>
     <string name="enter_minutes">Adja meg a perceket</string>
     <string name="Enter_number_of_minutes">Adja meg a percek számát</string>
+    <string name="Enter_number_and_press_the_play_button">Írja be a számot, és nyomja meg a lejátszás gombot</string>
 </resources>

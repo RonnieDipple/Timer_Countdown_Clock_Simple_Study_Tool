@@ -5,4 +5,5 @@
     <string name="press_to_start">按开始</string>
     <string name="enter_minutes">输入分钟</string>
     <string name="Enter_number_of_minutes">输入分钟数</string>
+    <string name="Enter_number_and_press_the_play_button">输入号码并按播放按钮</string>
 </resources>

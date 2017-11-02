@@ -5,4 +5,5 @@
     <string name="press_to_start">Stisknutím spustíte</string>
     <string name="enter_minutes">Zadejte minuty</string>
     <string name="Enter_number_of_minutes">Zadejte počet minut</string>
+    <string name="Enter_number_and_press_the_play_button">Zadejte číslo a stiskněte tlačítko přehrávání</string>
 </resources>

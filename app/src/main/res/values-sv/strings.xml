@@ -5,4 +5,5 @@
     <string name="press_to_start">Tryck för att starta</string>
     <string name="enter_minutes">Ange minuter</string>
     <string name="Enter_number_of_minutes">Ange antal minuter</string>
+    <string name="Enter_number_and_press_the_play_button">Ange nummer och tryck på uppspelningsknappen</string>
 </resources>

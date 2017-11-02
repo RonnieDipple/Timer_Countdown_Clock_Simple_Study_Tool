@@ -5,4 +5,5 @@
     <string name="press_to_start">Başlamaq üçün basın</string>
     <string name="enter_minutes">Minimal hesabla daxil et</string>
     <string name="Enter_number_of_minutes">Minimal hesabla daxil</string>
+    <string name="Enter_number_and_press_the_play_button">Nömrəni daxil edin və play düyməsini basın</string>
 </resources>

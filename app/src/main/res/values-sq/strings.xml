@@ -5,4 +5,5 @@
     <string name="press_to_start">"Shtypni për të filluar "</string>
     <string name="enter_minutes">Futni minuta</string>
     <string name="Enter_number_of_minutes">Futni numrin e minutave</string>
+    <string name="Enter_number_and_press_the_play_button">Futni numrin dhe shtypni butonin luaj</string>
 </resources>

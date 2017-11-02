@@ -5,4 +5,5 @@
     <string name="press_to_start">לחץ על כדי להתחיל</string>
     <string name="enter_minutes">הזן דקות</string>
     <string name="Enter_number_of_minutes">הזן מספר דקות</string>
+    <string name="Enter_number_and_press_the_play_button">הזן מספר ולחץ על לחצן ההפעלה</string>
 </resources>

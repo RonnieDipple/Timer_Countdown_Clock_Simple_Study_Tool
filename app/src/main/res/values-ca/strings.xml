@@ -5,4 +5,5 @@
     <string name="press_to_start">Premeu per començar</string>
     <string name="enter_minutes">Introduïu minuts</string>
     <string name="Enter_number_of_minutes">Introduïu un nombre de minuts</string>
+    <string name="Enter_number_and_press_the_play_button">Introduïu el número i premeu el botó Reproduir</string>
 </resources>

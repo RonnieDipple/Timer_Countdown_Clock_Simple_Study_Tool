@@ -5,4 +5,5 @@
     <string name="press_to_start">პრესის დასაწყებად</string>
     <string name="enter_minutes">შეიყვანეთ წუთი</string>
     <string name="Enter_number_of_minutes">შეიყვანეთ წუთების რაოდენობა</string>
+    <string name="Enter_number_and_press_the_play_button">შეიყვანეთ რიცხვი და დააჭირეთ თამაშს ღილაკს</string>
 </resources>

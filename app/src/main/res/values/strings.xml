@@ -12,4 +12,5 @@
     <string name="seperator" translatable="false">:</string>
     <string name="pauses_the_count_down_timer" translatable="false">Pauses the count down timer</string>
     <string name="Enter_number_of_minutes">Enter number of minutes</string>
+    <string name="Enter_number_and_press_the_play_button">Enter number and press the play button</string>
 </resources>

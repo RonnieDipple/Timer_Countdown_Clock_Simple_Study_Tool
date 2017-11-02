@@ -5,4 +5,5 @@
     <string name="press_to_start">Pritisnite za začetek</string>
     <string name="enter_minutes">Vnesite minute</string>
     <string name="Enter_number_of_minutes">Vnesite število minut</string>
+    <string name="Enter_number_and_press_the_play_button">Vnesite številko in pritisnite gumb za predvajanje</string>
 </resources>

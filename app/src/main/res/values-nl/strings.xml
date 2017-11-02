@@ -5,4 +5,5 @@
     <string name="press_to_start">Druk om te beginnen</string>
     <string name="enter_minutes">Enter minuten</string>
     <string name="Enter_number_of_minutes">Voer het aantal minuten in</string>
+    <string name="Enter_number_and_press_the_play_button">Voer nummer in en druk op de afspeelknop</string>
 </resources>

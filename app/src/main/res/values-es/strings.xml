@@ -5,4 +5,5 @@
     <string name="press_to_start">Presione para comenzar</string>
     <string name="enter_minutes">Introduzca minutos</string>
     <string name="Enter_number_of_minutes">Introduzca el número de minutos</string>
+    <string name="Enter_number_and_press_the_play_button">Ingrese el número y presione el botón de reproducción</string>
 </resources>

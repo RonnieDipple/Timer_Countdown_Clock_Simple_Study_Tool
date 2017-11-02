@@ -5,4 +5,5 @@
     <string name="press_to_start">開始するには</string>
     <string name="enter_minutes">分を入力する</string>
     <string name="Enter_number_of_minutes">分を入力する</string>
+    <string name="Enter_number_and_press_the_play_button">番号を入力して再生ボタンを押す</string>
 </resources>

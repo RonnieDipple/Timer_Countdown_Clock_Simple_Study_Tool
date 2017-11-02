@@ -5,4 +5,5 @@
     <string name="press_to_start">басу үшін басу</string>
     <string name="enter_minutes">минутты енгізу</string>
     <string name="Enter_number_of_minutes">минуттың санын енгізіңіз</string>
+    <string name="Enter_number_and_press_the_play_button">Нөмірді енгізіп, ойнату түймесін басыңыз</string>
 </resources>

@@ -5,4 +5,5 @@
     <string name="enter_minutes">Wprowadzić minuty</string>
     <string name="Enter_number_of_minutes">Wprowadzić liczbę minut</string>
     <string name="press_to_start">Naciśnij, aby rozpocząć</string>
+    <string name="Enter_number_and_press_the_play_button">Wprowadź numer i naciśnij przycisk odtwarzania</string>
 </resources>

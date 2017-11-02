@@ -5,4 +5,5 @@
     <string name="press_to_start">सुरू करण्यासाठी दाबा</string>
     <string name="enter_minutes">प्रविष्ट मिनिटे</string>
     <string name="Enter_number_of_minutes">मिनिटे नंबर प्रविष्ट करा</string>
+    <string name="Enter_number_and_press_the_play_button">नंबर प्रविष्ट करा आणि प्ले बटण दाबा</string>
 </resources>

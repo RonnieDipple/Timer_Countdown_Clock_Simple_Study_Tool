@@ -5,4 +5,5 @@
     <string name="press_to_start">Agħfas biex tibda</string>
     <string name="enter_minutes">Daħħal il-minuti</string>
     <string name="Enter_number_of_minutes">Daħħal in-numru ta \'minuti</string>
+    <string name="Enter_number_and_press_the_play_button">Daħħal in-numru u agħfas il-buttuna tal-logħob</string>
 </resources>
