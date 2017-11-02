@@ -32,7 +32,7 @@ class CountDownActivity : AppCompatActivity() {
 
 
     private var isRunning = false
-    private var isReset = false
+    private var isReset = true
     private var isPaused = false
     private var isOnFinish = false
     private var count = 0
@@ -56,7 +56,7 @@ class CountDownActivity : AppCompatActivity() {
         // Monitor launch times and interval from installation
         RateThisApp.onStart(this)
         // If the condition is satisfied, "Rate this app" dialog will be shown
-        val config = RateThisApp.Config(3, 1)
+        val config = RateThisApp.Config(3, 2)
         RateThisApp.showRateDialogIfNeeded(this)
         config.setUrl("http://www.google.com")// <-- before launch change to app store location of app
         RateThisApp.init(config)
@@ -67,14 +67,14 @@ class CountDownActivity : AppCompatActivity() {
         //VVV adverts make sure the numbers are right before launch VVV
 
 
-        MobileAds.initialize(applicationContext,
-                "ca-app-pub-3940256099942544~3347511713") //<-- change before launch change
-
-        b2adView = findViewById(R.id.b2adView)
-        val adRequest = AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR).build()
-
-
-        b2adView.loadAd(adRequest)
+//        MobileAds.initialize(applicationContext,
+//                "ca-app-pub-6679533492072913~3923978625") //<-- change before launch change//changed
+//
+//        b2adView = findViewById(R.id.b2adView)
+//        val adRequest = AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR).build()
+//
+//
+//        b2adView.loadAd(adRequest)
 
         //^^^ adverts make sure the numbers are right before launch ^^^
 
@@ -95,10 +95,12 @@ class CountDownActivity : AppCompatActivity() {
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
 
 
+
             }
 
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int,
                                            after: Int) {
+
 
             }
 
@@ -109,10 +111,10 @@ class CountDownActivity : AppCompatActivity() {
                 if (!isRunning) {
                     millisLeft = 0
                     isRunning = false
-                    txtViewCount.text = "" + timeInMillis / 1000
-                    txtViewCountMinutes.text = "" + timeInMillis / 1000
-                    pBar.progress = timeInMillis.toInt() + 0
-                    pBar.max = timeInMillis.toInt() / 1000
+                    txtViewCount.text = "" + 0+ timeInMillis / 1000
+                    txtViewCountMinutes.text = "" +0 + timeInMillis / 1000
+
+
                 }
 
             }
@@ -122,6 +124,7 @@ class CountDownActivity : AppCompatActivity() {
             //pauses the time
             count++ //ensures that on starting the timer back up, that it resumes from the same time
             isPaused = true
+            isRunning = false
             stop()
 
         }
@@ -152,14 +155,15 @@ class CountDownActivity : AppCompatActivity() {
             // the end sound from chiming when a new number is placed in the editTcount text field
             stop()
             millisLeft = 0
-            isRunning = false
             imageViewPlayButton.setImageResource(R.drawable.ic_start)
             countDownTimer.cancel()
-            txtViewCount.text = "" + timeInMillis / 1000
-            txtViewCountMinutes.text = "" + timeInMillis / 1000
+            txtViewCount.text = "" +0+ timeInMillis / 1000
+            txtViewCountMinutes.text = "" + 0+timeInMillis / 1000
             pBar.progress = timeInMillis.toInt() + 0
             pBar.max = timeInMillis.toInt() / 1000
             isReset = true
+            isRunning = false
+
 
 
         }
@@ -181,9 +185,9 @@ class CountDownActivity : AppCompatActivity() {
 
 
 
-        while (isPaused && count > 0) {
+        while (!isPaused && count > 0) {
             //when paused and started again this ensures the timer starts from the time it was paused
-            timeInMillis = millisLeft
+            timeInMillis = millisLeft -1000
             count--
 
 
@@ -230,7 +234,7 @@ class CountDownActivity : AppCompatActivity() {
                 pBar.max = timeInMillis.toInt() / 1000
                 isOnFinish = true
 
-                if (!isPaused || !isReset) {
+                if (!isPaused&&!isReset ) {
                     playSound()
 
 

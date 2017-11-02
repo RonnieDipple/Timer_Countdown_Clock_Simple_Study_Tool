@@ -4,4 +4,5 @@
     <string name="welcome">Tervetuloa</string>
     <string name="press_to_start">Aloita painamalla</string>
     <string name="enter_minutes">Anna minuutit</string>
+    <string name="Enter_number_of_minutes">Anna minuuttien määrä</string>
 </resources>

@@ -4,4 +4,5 @@
     <string name="welcome">Soo dhaweyn</string>
     <string name="press_to_start">Riix si aad u bilowdo</string>
     <string name="enter_minutes">Geli daqiiqo</string>
+    <string name="Enter_number_of_minutes">Gali tirada daqiiqadaha</string>
 </resources>

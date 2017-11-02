@@ -4,4 +4,5 @@
     <string name="welcome">Merħba</string>
     <string name="press_to_start">Agħfas biex tibda</string>
     <string name="enter_minutes">Daħħal il-minuti</string>
+    <string name="Enter_number_of_minutes">Daħħal in-numru ta \'minuti</string>
 </resources>

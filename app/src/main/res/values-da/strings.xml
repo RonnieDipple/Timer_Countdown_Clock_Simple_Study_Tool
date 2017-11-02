@@ -4,4 +4,5 @@
     <string name="welcome">Velkommen</string>
     <string name="press_to_start">Tryk for at starte</string>
     <string name="enter_minutes">Indtast minutter</string>
+    <string name="Enter_number_of_minutes">Indtast antal minutter</string>
 </resources>

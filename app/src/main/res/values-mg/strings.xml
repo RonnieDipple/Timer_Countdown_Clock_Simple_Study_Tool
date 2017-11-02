@@ -4,5 +4,5 @@
     <string name="welcome">Welcome</string>
     <string name="press_to_start">Mandrosoa aloha</string>
     <string name="enter_minutes">Karohy minitra</string>
-    <string name="pauses_the_count_down_timer">Midira ny isa minitra</string>
+    <string name="Enter_number_of_minutes">Ampidiro minitra maromaro</string>
 </resources>

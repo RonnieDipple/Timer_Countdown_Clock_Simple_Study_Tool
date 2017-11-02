@@ -4,4 +4,5 @@
     <string name="welcome">Καλώς ήλθατε</string>
     <string name="press_to_start">Πατήστε για να ξεκινήσετε</string>
     <string name="enter_minutes">Εισάγετε λεπτά</string>
+    <string name="Enter_number_of_minutes">Εισαγάγετε τον αριθμό των λεπτών</string>
 </resources>

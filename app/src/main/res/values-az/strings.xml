@@ -4,4 +4,5 @@
     <string name="welcome">Xoş gəldiniz</string>
     <string name="press_to_start">Başlamaq üçün basın</string>
     <string name="enter_minutes">Minimal hesabla daxil et</string>
+    <string name="Enter_number_of_minutes">Minimal hesabla daxil</string>
 </resources>

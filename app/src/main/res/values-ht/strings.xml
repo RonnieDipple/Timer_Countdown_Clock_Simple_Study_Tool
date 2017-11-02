@@ -4,4 +4,5 @@
     <string name="welcome">Byenveni</string>
     <string name="press_to_start">Press yo kòmanse</string>
     <string name="enter_minutes">Mete minit</string>
+    <string name="Enter_number_of_minutes">Mete kantite minit</string>
 </resources>

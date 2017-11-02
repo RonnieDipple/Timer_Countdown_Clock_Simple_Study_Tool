@@ -4,4 +4,5 @@
     <string name="welcome">Ласкаво просимо</string>
     <string name="press_to_start">Натисніть, щоб почати</string>
     <string name="enter_minutes">Введіть хвилини</string>
+    <string name="Enter_number_of_minutes">Введіть кількість хвилин</string>
 </resources>

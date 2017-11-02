@@ -4,4 +4,5 @@
     <string name="welcome">Добре дошъл</string>
     <string name="press_to_start">Натиснете, за да започнете</string>
     <string name="enter_minutes">Въведете минути</string>
+    <string name="Enter_number_of_minutes">Въведете броя на минути</string>
 </resources>

@@ -3,4 +3,5 @@
     <string name="welcome">Maligayang pagdating</string>
     <string name="press_to_start">Pindutin upang simulan</string>
     <string name="enter_minutes">Ipasok ang mga minuto</string>
+    <string name="Enter_number_of_minutes">Ipasok ang bilang ng mga minuto</string>
 </resources>

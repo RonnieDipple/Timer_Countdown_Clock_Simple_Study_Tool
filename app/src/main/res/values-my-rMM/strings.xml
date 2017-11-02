@@ -4,4 +4,5 @@
     <string name="welcome">" ဟလို"</string>
     <string name="press_to_start">start ကိုနှိပ်ပါ</string>
     <string name="enter_minutes">မိနစ် Enter</string>
+    <string name="Enter_number_of_minutes">မိနစ်အရေအတွက် Enter</string>
 </resources>

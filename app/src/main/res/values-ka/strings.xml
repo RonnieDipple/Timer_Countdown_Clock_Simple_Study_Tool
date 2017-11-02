@@ -4,4 +4,5 @@
     <string name="welcome">გამარჯობა</string>
     <string name="press_to_start">პრესის დასაწყებად</string>
     <string name="enter_minutes">შეიყვანეთ წუთი</string>
+    <string name="Enter_number_of_minutes">შეიყვანეთ წუთების რაოდენობა</string>
 </resources>

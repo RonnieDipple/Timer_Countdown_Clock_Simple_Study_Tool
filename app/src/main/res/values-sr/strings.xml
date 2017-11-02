@@ -4,4 +4,5 @@
     <string name="welcome">Добродошли</string>
     <string name="press_to_start">Притисните за покретање</string>
     <string name="enter_minutes">Унесите минут</string>
+    <string name="Enter_number_of_minutes">Унесите број минута</string>
 </resources>

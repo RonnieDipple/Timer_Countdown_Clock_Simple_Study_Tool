@@ -4,4 +4,5 @@
     <string name="welcome">Benvinguda</string>
     <string name="press_to_start">Premeu per començar</string>
     <string name="enter_minutes">Introduïu minuts</string>
+    <string name="Enter_number_of_minutes">Introduïu un nombre de minuts</string>
 </resources>

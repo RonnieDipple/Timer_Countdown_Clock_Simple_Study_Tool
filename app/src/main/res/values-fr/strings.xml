@@ -4,4 +4,5 @@
     <string name="welcome">Bienvenue</string>
     <string name="press_to_start">Appuyer pour démarrer</string>
     <string name="enter_minutes">Entrer les minutes</string>
+    <string name="Enter_number_of_minutes">Entrez le nombre de minutes</string>
 </resources>

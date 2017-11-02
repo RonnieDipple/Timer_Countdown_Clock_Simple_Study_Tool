@@ -4,4 +4,5 @@
     <string name="welcome">Tervitus</string>
     <string name="press_to_start">Vajutage, et alustada</string>
     <string name="enter_minutes">Sisesta minut</string>
+    <string name="Enter_number_of_minutes">Sisesta minutite arv</string>
 </resources>

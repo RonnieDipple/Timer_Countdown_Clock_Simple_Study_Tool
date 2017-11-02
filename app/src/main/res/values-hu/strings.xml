@@ -4,4 +4,5 @@
     <string name="welcome">Üdvözöljük</string>
     <string name="press_to_start">Nyomja meg a startot</string>
     <string name="enter_minutes">Adja meg a perceket</string>
+    <string name="Enter_number_of_minutes">Adja meg a percek számát</string>
 </resources>

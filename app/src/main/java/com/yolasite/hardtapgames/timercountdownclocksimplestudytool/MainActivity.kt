@@ -23,14 +23,14 @@ class MainActivity : AppCompatActivity() {
 
         //VVV adverts make sure the numbers are right before launch VVV
 
-        MobileAds.initialize(applicationContext,
-                "ca-app-pub-3940256099942544~3347511713") //<-- change before launch change
-
-        b1adView = findViewById(R.id.b1adView)
-        val adRequest = AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR).build()
-
-
-        b1adView.loadAd(adRequest)
+//        MobileAds.initialize(applicationContext,
+//                "ca-app-pub-6679533492072913~3923978625") //<-- change before launch change//now changed
+//
+//        b1adView = findViewById(R.id.b1adView)
+//        val adRequest = AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR).build()
+//
+//
+//        b1adView.loadAd(adRequest)
 
         //^^^ adverts make sure the numbers are right before launch ^^^
 
