@@ -32,11 +32,12 @@ class CountDownActivity : AppCompatActivity() {
 
 
     private var isRunning = false
-    private var isReset = true
+    private var isReset = false
     private var isPaused = false
     private var isOnFinish = false
     private var count = 0
-    private var startCount = 0
+
+
 
 
     private lateinit var b2adView: AdView
@@ -95,7 +96,6 @@ class CountDownActivity : AppCompatActivity() {
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
 
 
-
             }
 
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int,
@@ -111,8 +111,8 @@ class CountDownActivity : AppCompatActivity() {
                 if (!isRunning) {
                     millisLeft = 0
                     isRunning = false
-                    txtViewCount.text = "" + 0+ timeInMillis / 1000
-                    txtViewCountMinutes.text = "" +0 + timeInMillis / 1000
+                    txtViewCount.text = "" + 0 + timeInMillis / 1000
+                    txtViewCountMinutes.text = "" + 0 + timeInMillis / 1000
 
 
                 }
@@ -121,11 +121,25 @@ class CountDownActivity : AppCompatActivity() {
         })
 
         imagePauseView.setOnClickListener {
-            //pauses the time
-            count++ //ensures that on starting the timer back up, that it resumes from the same time
-            isPaused = true
-            isRunning = false
-            stop()
+
+            if (!isRunning) {
+
+
+                if (editTCount.text.toString().isEmpty()) {
+                    Toast.makeText(this@CountDownActivity, R.string.Enter_number_of_minutes, Toast.LENGTH_LONG).show()
+
+                }
+
+
+
+            }else{
+                //pauses the time
+                count++ //ensures that on starting the timer back up, that it resumes from the same time
+                isPaused = true
+                isRunning = false
+                stop()
+            }
+
 
         }
 
@@ -153,17 +167,27 @@ class CountDownActivity : AppCompatActivity() {
         imageViewReset.setOnClickListener {
             //resets everything and activates reset boolean to true, to be checked in onFinish to prevent
             // the end sound from chiming when a new number is placed in the editTcount text field
-            stop()
-            millisLeft = 0
-            imageViewPlayButton.setImageResource(R.drawable.ic_start)
-            countDownTimer.cancel()
-            txtViewCount.text = "" +0+ timeInMillis / 1000
-            txtViewCountMinutes.text = "" + 0+timeInMillis / 1000
-            pBar.progress = timeInMillis.toInt() + 0
-            pBar.max = timeInMillis.toInt() / 1000
-            isReset = true
-            isRunning = false
 
+            if (!isRunning && (editTCount.text.toString().isEmpty())) {
+
+                Toast.makeText(this@CountDownActivity, R.string.Enter_number_of_minutes, Toast.LENGTH_LONG).show()
+
+
+
+
+            }else {
+                millisLeft = 0
+                imageViewPlayButton.setImageResource(R.drawable.ic_start)
+                countDownTimer.cancel()
+                txtViewCount.text = "" + 0 + 0
+                txtViewCountMinutes.text = "" + 0 + 0
+                pBar.progress = timeInMillis.toInt() + 0
+                pBar.max = timeInMillis.toInt() / 1000
+                isReset = true
+                isRunning = false
+                isPaused = false
+                stop()
+            }
 
 
         }
@@ -178,8 +202,6 @@ class CountDownActivity : AppCompatActivity() {
         timeInMillis = timeInput
         pBar.max = timeInMillis.toInt() / 1000
         isPaused = false
-        isReset = false
-        startCount++
 
 
 
@@ -187,7 +209,7 @@ class CountDownActivity : AppCompatActivity() {
 
         while (!isPaused && count > 0) {
             //when paused and started again this ensures the timer starts from the time it was paused
-            timeInMillis = millisLeft -1000
+            timeInMillis = millisLeft - 1000
             count--
 
 
@@ -226,15 +248,15 @@ class CountDownActivity : AppCompatActivity() {
             override fun onFinish() {
                 //finishes everything and changes the stop button view back into the play button view
                 imageViewPlayButton.setImageResource(R.drawable.ic_start)
-                isRunning = false
                 timeInMillis = 0
-                txtViewCount.text = "" + timeInMillis
-                txtViewCountMinutes.text = "" + timeInMillis
+                txtViewCount.text = "" + timeInMillis + 0
+                txtViewCountMinutes.text = "" + timeInMillis + 0
                 pBar.progress = timeInMillis.toInt() + 0
                 pBar.max = timeInMillis.toInt() / 1000
                 isOnFinish = true
+                isRunning = false
 
-                if (!isPaused&&!isReset ) {
+                if (!isPaused && !isReset) {
                     playSound()
 
 
