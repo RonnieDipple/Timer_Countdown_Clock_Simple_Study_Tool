@@ -37,6 +37,7 @@ class CountDownActivity : AppCompatActivity() {
     private var isOnFinish = false
     private var count = 0
     private var startCount = 0
+    private var resetForAlarm = false
 
 
 
@@ -103,45 +104,37 @@ class CountDownActivity : AppCompatActivity() {
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int,
                                            after: Int) {
 
-
             }
 
             override fun afterTextChanged(s: Editable) {
-
                 //performs the actions below after the field to add the count down number has been changed, including deleting a previous number
                 //on deleting a number the field is changed to null so the actions below are still performed
 
                 if (!isRunning) {
                     millisLeft = 0
+                    resetForAlarm = false
                     isRunning = false
-                    txtViewCount.text = "" + 0 + timeInMillis / 1000
-                    txtViewCountMinutes.text = "" + 0 + timeInMillis / 1000
-
-
+                    txtViewCount.text = "" + timeInMillis / 1000
+                    txtViewCountMinutes.text = "" + timeInMillis / 1000
+                    pBar.progress = timeInMillis.toInt() + 0
+                    pBar.max = timeInMillis.toInt() / 1000
                 }
 
             }
         })
 
+
         imagePauseView.setOnClickListener {
+            if (editTCount.text.isEmpty()|| editTCount.text.isNotEmpty() && startCount<=0){
+                Toast.makeText(this,getString(R.string.Enter_number_and_press_the_play_button), Toast.LENGTH_LONG).show()
+            }else {
 
-            if (!isRunning) {
-
-
-                if (editTCount.text.toString().isEmpty()|| editTCount.text.toString().isNotEmpty()) { //editTCount.text.toString().isNotEmpty() will need it's own if statement and toast plus numerous language translations for when people hit stop and pause
-                    Toast.makeText(this@CountDownActivity, getString(R.string.Enter_number_and_press_the_play_button), Toast.LENGTH_LONG).show()
-
-                }
-
-
-            } else {
                 //pauses the time
                 count++ //ensures that on starting the timer back up, that it resumes from the same time
                 isPaused = true
-                isRunning = false
-
                 stop()
             }
+
 
 
         }
@@ -172,24 +165,27 @@ class CountDownActivity : AppCompatActivity() {
             //resets everything and activates reset boolean to true, to be checked in onFinish to prevent
             // the end sound from chiming when a new number is placed in the editTcount text field
 
-            if (!isRunning && (editTCount.text.toString().isEmpty()) || startCount == 0 && editTCount.text.toString().isNotEmpty()) {
 
-                Toast.makeText(this@CountDownActivity, getString(R.string.Enter_number_and_press_the_play_button), Toast.LENGTH_LONG).show()
-
-
-            } else if (isRunning || isPaused || !isRunning) {
-
+                //resets everything and activates reset boolean to true, to be checked in onFinish to prevent
+                // the end sound from chiming when a new number is placed in the editTcount text field
+            if (editTCount.text.isEmpty()|| editTCount.text.isNotEmpty() && startCount<=0){
+                Toast.makeText(this,getString(R.string.Enter_number_and_press_the_play_button), Toast.LENGTH_LONG).show()
+            }else {
+                stop()
                 millisLeft = 0
+                isRunning = false
                 imageViewPlayButton.setImageResource(R.drawable.ic_start)
-                txtViewCount.text = "" + 0 + 0
-                txtViewCountMinutes.text = "" + 0 + 0
+                countDownTimer.cancel()
+                txtViewCount.text = "" + timeInMillis / 1000
+                txtViewCountMinutes.text = "" + timeInMillis / 1000
                 pBar.progress = timeInMillis.toInt() + 0
                 pBar.max = timeInMillis.toInt() / 1000
                 isReset = true
-                isPaused = false
-                startCount --
-                stop()
+                resetForAlarm = true
+                editTCount.text = null
             }
+
+
 
 
         }
@@ -198,14 +194,17 @@ class CountDownActivity : AppCompatActivity() {
 
     private fun start() {
 
-
         //starts everything and resets isPaused and isReset to false so that the sound will play when onFinish is activated
+
         val textInput = editTCount.text.toString()
         val timeInput = textInput.toLong() * 60 * 1000
         timeInMillis = timeInput
         pBar.max = timeInMillis.toInt() / 1000
         isPaused = false
+        isReset = false
         startCount++
+
+
 
 
 
@@ -253,22 +252,20 @@ class CountDownActivity : AppCompatActivity() {
             override fun onFinish() {
                 //finishes everything and changes the stop button view back into the play button view
                 imageViewPlayButton.setImageResource(R.drawable.ic_start)
+                isRunning = false
                 timeInMillis = 0
-                txtViewCount.text = "" + timeInMillis + 0
-                txtViewCountMinutes.text = "" + timeInMillis + 0
+                txtViewCount.text = "" + timeInMillis
+                txtViewCountMinutes.text = "" + timeInMillis
                 pBar.progress = timeInMillis.toInt() + 0
                 pBar.max = timeInMillis.toInt() / 1000
                 isOnFinish = true
-                isRunning = false
 
-                if (!isPaused && !isReset) {
+                if (!resetForAlarm) {
                     playSound()
 
 
                     //prevents the end chime from playing when the time is changed or reset
                     // ensures it only plays once the timer reaches zero
-
-
                 }
 
 
