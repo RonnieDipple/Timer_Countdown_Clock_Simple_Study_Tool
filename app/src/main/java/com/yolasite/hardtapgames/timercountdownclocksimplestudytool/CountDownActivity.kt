@@ -37,10 +37,6 @@ class CountDownActivity : AppCompatActivity() {
     private var isOnFinish = false
     private var count = 0
     private var startCount = 0
-    private var resetForAlarm = false
-
-
-
 
 
     private lateinit var b2adView: AdView
@@ -112,12 +108,12 @@ class CountDownActivity : AppCompatActivity() {
 
                 if (!isRunning) {
                     millisLeft = 0
-                    resetForAlarm = false
                     isRunning = false
                     txtViewCount.text = "" + timeInMillis / 1000
                     txtViewCountMinutes.text = "" + timeInMillis / 1000
                     pBar.progress = timeInMillis.toInt() + 0
                     pBar.max = timeInMillis.toInt() / 1000
+
                 }
 
             }
@@ -125,16 +121,25 @@ class CountDownActivity : AppCompatActivity() {
 
 
         imagePauseView.setOnClickListener {
-            if (editTCount.text.isEmpty()|| editTCount.text.isNotEmpty() && startCount<=0){
-                Toast.makeText(this,getString(R.string.Enter_number_and_press_the_play_button), Toast.LENGTH_LONG).show()
-            }else {
+
+            if (editTCount.text.isEmpty()&&isRunning){
+                //pauses the time
+                count++ //ensures that on starting the timer back up, that it resumes from the same time
+                isPaused = true
+
+                stop()
+
+
+            }else if (editTCount.text.isEmpty() || editTCount.text.isNotEmpty() && startCount <= 0) {
+                Toast.makeText(this, getString(R.string.Enter_number_and_press_the_play_button), Toast.LENGTH_LONG).show()
+            } else {
 
                 //pauses the time
                 count++ //ensures that on starting the timer back up, that it resumes from the same time
                 isPaused = true
+
                 stop()
             }
-
 
 
         }
@@ -166,26 +171,33 @@ class CountDownActivity : AppCompatActivity() {
             // the end sound from chiming when a new number is placed in the editTcount text field
 
 
-                //resets everything and activates reset boolean to true, to be checked in onFinish to prevent
-                // the end sound from chiming when a new number is placed in the editTcount text field
-            if (editTCount.text.isEmpty()|| editTCount.text.isNotEmpty() && startCount<=0){
-                Toast.makeText(this,getString(R.string.Enter_number_and_press_the_play_button), Toast.LENGTH_LONG).show()
-            }else {
+            //resets everything and activates reset boolean to true, to be checked in onFinish to prevent
+            // the end sound from chiming when a new number is placed in the editTcount text field
+            if(editTCount.text.isEmpty()&&!isRunning||editTCount.text.isEmpty()&&isRunning) {
+
                 stop()
                 millisLeft = 0
-                isRunning = false
-                imageViewPlayButton.setImageResource(R.drawable.ic_start)
-                countDownTimer.cancel()
                 txtViewCount.text = "" + timeInMillis / 1000
                 txtViewCountMinutes.text = "" + timeInMillis / 1000
                 pBar.progress = timeInMillis.toInt() + 0
                 pBar.max = timeInMillis.toInt() / 1000
                 isReset = true
-                resetForAlarm = true
                 editTCount.text = null
+
+
+            } else if (editTCount.text.isEmpty()|| editTCount.text.isNotEmpty() && startCount <= 0) {
+                Toast.makeText(this, getString(R.string.Enter_number_and_press_the_play_button), Toast.LENGTH_LONG).show()
+            } else {
+                stop()
+                millisLeft = 0
+                txtViewCount.text = "" + timeInMillis / 1000
+                txtViewCountMinutes.text = "" + timeInMillis / 1000
+                pBar.progress = timeInMillis.toInt() + 0
+                pBar.max = timeInMillis.toInt() / 1000
+                isReset = true
+                editTCount.text = null
+
             }
-
-
 
 
         }
@@ -200,16 +212,8 @@ class CountDownActivity : AppCompatActivity() {
         val timeInput = textInput.toLong() * 60 * 1000
         timeInMillis = timeInput
         pBar.max = timeInMillis.toInt() / 1000
-        isPaused = false
-        isReset = false
         startCount++
-
-
-
-
-
-
-
+        isPaused = false
 
         while (!isPaused && count > 0) {
             //when paused and started again this ensures the timer starts from the time it was paused
@@ -259,24 +263,30 @@ class CountDownActivity : AppCompatActivity() {
                 pBar.progress = timeInMillis.toInt() + 0
                 pBar.max = timeInMillis.toInt() / 1000
                 isOnFinish = true
-
-                if (!resetForAlarm) {
+                stop()
+                if (!isReset){
                     playSound()
 
 
-                    //prevents the end chime from playing when the time is changed or reset
-                    // ensures it only plays once the timer reaches zero
                 }
+
+                if (isReset){toasty()
+                }
+
 
 
             }
 
+
             //VVV starts everything, very important VVV
         }.start()
         countDownTimer.start()
+        isReset=false
+
+
+
 
         //^^^ starts everything, very important ^^^
-
 
     }
 
@@ -299,6 +309,11 @@ class CountDownActivity : AppCompatActivity() {
 
         mp.start()
 
+
+    }
+
+    private fun toasty() {
+        Toast.makeText(this, "Tap play again to confirm a new time", Toast.LENGTH_LONG).show()
 
     }
 
