@@ -125,15 +125,6 @@
         ads:layout_constraintEnd_toEndOf="parent"
         ads:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textViewToast"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtViewCount"
-        android:layout_centerHorizontal="true"
-        android:text="@string/Enter_number_and_press_the_play_button"
-        android:textSize="10sp" />
-
 
 </RelativeLayout>
 

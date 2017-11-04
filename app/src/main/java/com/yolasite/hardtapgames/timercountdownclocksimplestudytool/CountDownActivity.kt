@@ -16,6 +16,11 @@ import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
 import com.kobakei.ratethisapp.RateThisApp
+import android.widget.TextView
+import android.widget.LinearLayout
+import android.widget.Toast
+
+
 
 
 class CountDownActivity : AppCompatActivity() {
@@ -26,7 +31,7 @@ class CountDownActivity : AppCompatActivity() {
     lateinit private var imageViewReset: ImageView
     lateinit private var countDownTimer: CountDownTimer
     lateinit private var imagePauseView: ImageView
-    lateinit private var textViewToast: TextView
+
 
     internal var timeInMillis: Long = 0
     internal var millisLeft: Long = 0
@@ -175,6 +180,7 @@ class CountDownActivity : AppCompatActivity() {
             // the end sound from chiming when a new number is placed in the editTcount text field
             if (editTCount.text.isEmpty() && !isRunning || editTCount.text.isEmpty() && isRunning) {
 
+
                 stop()
                 millisLeft = 0
                 txtViewCount.text = "" + timeInMillis / 1000
@@ -312,16 +318,29 @@ class CountDownActivity : AppCompatActivity() {
     }
 
     private fun toasty() {
-        val myToast = Toast.makeText(this, getString(R.string.Press_The_Play_button_again_to_confirm_a_new_time), Toast.LENGTH_LONG)
-        myToast.setGravity(Gravity.CENTER, 0, 0)
-        myToast.show()
+//        val myToast = Toast.makeText(this, getString(R.string.Press_The_Play_button_again_to_confirm_a_new_time), Toast.LENGTH_LONG)
+//        myToast.setGravity(Gravity.CENTER, 0, 0)
+//        myToast.show()
+        val toast = Toast.makeText(this, getString(R.string.Press_The_Play_button_again_to_confirm_a_new_time), Toast.LENGTH_SHORT)
+        val layout = toast.view as LinearLayout
+        if (layout.childCount > 0) {
+            val tv = layout.getChildAt(0) as TextView
+            tv.gravity = Gravity.CENTER_VERTICAL or Gravity.CENTER_HORIZONTAL
+        }
+        toast.show()
 
     }
 
     private fun mainToast() {
-        val enterNumToast = Toast.makeText(this, getString(R.string.Enter_number_and_press_the_play_button), Toast.LENGTH_LONG)
-        var textViewToast = enterNumToast.vi
-        if
+
+
+        val toast = Toast.makeText(this, getString(R.string.Enter_number_and_press_the_play_button), Toast.LENGTH_SHORT)
+        val layout = toast.view as LinearLayout
+        if (layout.childCount > 0) {
+            val tv = layout.getChildAt(0) as TextView
+            tv.gravity = Gravity.CENTER_VERTICAL or Gravity.CENTER_HORIZONTAL
+        }
+        toast.show()
 
     }
 
