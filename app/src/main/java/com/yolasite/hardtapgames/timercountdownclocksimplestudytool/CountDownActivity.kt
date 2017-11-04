@@ -178,7 +178,7 @@ class CountDownActivity : AppCompatActivity() {
 
             //resets everything and activates reset boolean to true, to be checked in onFinish to prevent
             // the end sound from chiming when a new number is placed in the editTcount text field
-            if (editTCount.text.isEmpty() && !isRunning || editTCount.text.isEmpty() && isRunning) {
+            if (editTCount.text.isEmpty() && isRunning) {
 
 
                 stop()
@@ -191,7 +191,7 @@ class CountDownActivity : AppCompatActivity() {
                 editTCount.text = null
 
 
-            } else if (editTCount.text.isEmpty() || editTCount.text.isNotEmpty() && startCount <= 0) {
+            } else if (editTCount.text.isEmpty() && !isRunning||editTCount.text.isEmpty() || editTCount.text.isNotEmpty() && startCount <= 0) {
                 mainToast()
             } else {
                 stop()
@@ -327,6 +327,7 @@ class CountDownActivity : AppCompatActivity() {
             val tv = layout.getChildAt(0) as TextView
             tv.gravity = Gravity.CENTER_VERTICAL or Gravity.CENTER_HORIZONTAL
         }
+        toast.setGravity(Gravity.TOP,0,0)
         toast.show()
 
     }
@@ -340,6 +341,7 @@ class CountDownActivity : AppCompatActivity() {
             val tv = layout.getChildAt(0) as TextView
             tv.gravity = Gravity.CENTER_VERTICAL or Gravity.CENTER_HORIZONTAL
         }
+        toast.setGravity(Gravity.TOP,0,0)
         toast.show()
 
     }
