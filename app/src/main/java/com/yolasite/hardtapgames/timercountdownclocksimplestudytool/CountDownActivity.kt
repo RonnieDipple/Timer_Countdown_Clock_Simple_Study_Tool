@@ -178,8 +178,8 @@ class CountDownActivity : AppCompatActivity() {
                 stop()
                 millisLeft = 0
                 txtViewCount.text = "" + timeInMillis / 1000
-                txtViewCountMinutes.text = "" + timeInMillis / 1000
-                pBar.progress = timeInMillis.toInt() + 0
+                txtViewCountMinutes.text = "" + timeInMillis/ 1000
+                pBar.progress = timeInMillis.toInt()
                 pBar.max = timeInMillis.toInt() / 1000
                 isReset = true
                 editTCount.text = null
@@ -191,8 +191,8 @@ class CountDownActivity : AppCompatActivity() {
                 stop()
                 millisLeft = 0
                 txtViewCount.text = "" + timeInMillis / 1000
-                txtViewCountMinutes.text = "" + timeInMillis / 1000
-                pBar.progress = timeInMillis.toInt() + 0
+                txtViewCountMinutes.text = "" + timeInMillis/ 1000
+                pBar.progress = timeInMillis.toInt()
                 pBar.max = timeInMillis.toInt() / 1000
                 isReset = true
                 editTCount.text = null
@@ -260,7 +260,7 @@ class CountDownActivity : AppCompatActivity() {
                 timeInMillis = 0
                 txtViewCount.text = "" + timeInMillis
                 txtViewCountMinutes.text = "" + timeInMillis
-                pBar.progress = timeInMillis.toInt() + 0
+                pBar.progress = timeInMillis.toInt()
                 pBar.max = timeInMillis.toInt() / 1000
                 isOnFinish = true
                 stop()
