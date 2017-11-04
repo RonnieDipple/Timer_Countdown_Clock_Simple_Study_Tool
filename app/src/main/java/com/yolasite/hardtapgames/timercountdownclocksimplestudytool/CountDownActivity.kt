@@ -8,6 +8,7 @@ import android.os.CountDownTimer
 import android.support.v7.app.AppCompatActivity
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.Gravity
 import android.view.Window
 import android.view.WindowManager
 import android.widget.*
@@ -24,8 +25,8 @@ class CountDownActivity : AppCompatActivity() {
     lateinit private var imageViewPlayButton: ImageView
     lateinit private var imageViewReset: ImageView
     lateinit private var countDownTimer: CountDownTimer
-    lateinit private var txtViewCountMinutes: TextView
     lateinit private var imagePauseView: ImageView
+    lateinit private var textViewToast: TextView
 
     internal var timeInMillis: Long = 0
     internal var millisLeft: Long = 0
@@ -81,7 +82,7 @@ class CountDownActivity : AppCompatActivity() {
         pBar = findViewById(R.id.progressBar) //<- initialises the circular progress bar
         editTCount = findViewById(R.id.editTCount) //<- initialises the field to input the to count down
         txtViewCount = findViewById(R.id.txtViewCount)//<- initialises the visual representation of the seconds in the count down
-        txtViewCountMinutes = findViewById<EditText>(R.id.txtViewCountMinutes)//<- initialises the visual representation of the minutes in the count down
+
         imageViewPlayButton = findViewById(R.id.imageViewPlayButton) //<- initialises the button that starts the count down
         imageViewReset = findViewById(R.id.imageViewReset)//<- initialises the button that resets the count down
         imagePauseView = findViewById(R.id.imagePauseView)//<- initialises the button that pauses the count down
@@ -109,9 +110,8 @@ class CountDownActivity : AppCompatActivity() {
                 if (!isRunning) {
                     millisLeft = 0
                     isRunning = false
-                    txtViewCount.text = "" + timeInMillis / 1000
-                    txtViewCountMinutes.text = "" + timeInMillis / 1000
-                    pBar.progress = timeInMillis.toInt() + 0
+                    txtViewCount.text = "0" + timeInMillis / 1000
+                    pBar.progress = timeInMillis.toInt()
                     pBar.max = timeInMillis.toInt() / 1000
 
                 }
@@ -122,7 +122,7 @@ class CountDownActivity : AppCompatActivity() {
 
         imagePauseView.setOnClickListener {
 
-            if (editTCount.text.isEmpty()&&isRunning){
+            if (editTCount.text.isEmpty() && isRunning) {
                 //pauses the time
                 count++ //ensures that on starting the timer back up, that it resumes from the same time
                 isPaused = true
@@ -130,8 +130,8 @@ class CountDownActivity : AppCompatActivity() {
                 stop()
 
 
-            }else if (editTCount.text.isEmpty() || editTCount.text.isNotEmpty() && startCount <= 0) {
-                Toast.makeText(this, getString(R.string.Enter_number_and_press_the_play_button), Toast.LENGTH_LONG).show()
+            } else if (editTCount.text.isEmpty() || editTCount.text.isNotEmpty() && startCount <= 0) {
+                mainToast()
             } else {
 
                 //pauses the time
@@ -152,7 +152,7 @@ class CountDownActivity : AppCompatActivity() {
 
             if (!isRunning) {
                 if (editTCount.text.toString().isEmpty()) {
-                    Toast.makeText(this@CountDownActivity, getString(R.string.Enter_number_and_press_the_play_button), Toast.LENGTH_LONG).show()
+                    mainToast()
 
                 } else {
 
@@ -173,25 +173,25 @@ class CountDownActivity : AppCompatActivity() {
 
             //resets everything and activates reset boolean to true, to be checked in onFinish to prevent
             // the end sound from chiming when a new number is placed in the editTcount text field
-            if(editTCount.text.isEmpty()&&!isRunning||editTCount.text.isEmpty()&&isRunning) {
+            if (editTCount.text.isEmpty() && !isRunning || editTCount.text.isEmpty() && isRunning) {
 
                 stop()
                 millisLeft = 0
                 txtViewCount.text = "" + timeInMillis / 1000
-                txtViewCountMinutes.text = "" + timeInMillis/ 1000
+
                 pBar.progress = timeInMillis.toInt()
                 pBar.max = timeInMillis.toInt() / 1000
                 isReset = true
                 editTCount.text = null
 
 
-            } else if (editTCount.text.isEmpty()|| editTCount.text.isNotEmpty() && startCount <= 0) {
-                Toast.makeText(this, getString(R.string.Enter_number_and_press_the_play_button), Toast.LENGTH_LONG).show()
+            } else if (editTCount.text.isEmpty() || editTCount.text.isNotEmpty() && startCount <= 0) {
+                mainToast()
             } else {
                 stop()
                 millisLeft = 0
                 txtViewCount.text = "" + timeInMillis / 1000
-                txtViewCountMinutes.text = "" + timeInMillis/ 1000
+
                 pBar.progress = timeInMillis.toInt()
                 pBar.max = timeInMillis.toInt() / 1000
                 isReset = true
@@ -237,12 +237,13 @@ class CountDownActivity : AppCompatActivity() {
                 val minutes = millisUntilFinished / 1000 / 60
                 val seconds = millisUntilFinished / 1000 % 60
 
+
                 //^converts milliseconds in to seconds and minutes^
 
                 //VVV shows the progress of time in circular progress bar and visual representation of the time VVV
 
-                txtViewCountMinutes.text = minutes.toString()
-                txtViewCount.text = seconds.toString()
+
+                txtViewCount.text = String.format("%02d:%02d", minutes, seconds)
                 pBar.progress = Math.round(millisUntilFinished * 0.001f)
                 millisLeft = millisUntilFinished
 
@@ -258,21 +259,21 @@ class CountDownActivity : AppCompatActivity() {
                 imageViewPlayButton.setImageResource(R.drawable.ic_start)
                 isRunning = false
                 timeInMillis = 0
-                txtViewCount.text = "" + timeInMillis
-                txtViewCountMinutes.text = "" + timeInMillis
+                txtViewCount.text = "0" + timeInMillis
+
                 pBar.progress = timeInMillis.toInt()
                 pBar.max = timeInMillis.toInt() / 1000
                 isOnFinish = true
                 stop()
-                if (!isReset){
+                if (!isReset) {
                     playSound()
 
 
                 }
 
-                if (isReset){toasty()
+                if (isReset) {
+                    toasty()
                 }
-
 
 
             }
@@ -281,9 +282,7 @@ class CountDownActivity : AppCompatActivity() {
             //VVV starts everything, very important VVV
         }.start()
         countDownTimer.start()
-        isReset=false
-
-
+        isReset = false
 
 
         //^^^ starts everything, very important ^^^
@@ -313,7 +312,16 @@ class CountDownActivity : AppCompatActivity() {
     }
 
     private fun toasty() {
-        Toast.makeText(this, "Tap play again to confirm a new time", Toast.LENGTH_LONG).show()
+        val myToast = Toast.makeText(this, getString(R.string.Press_The_Play_button_again_to_confirm_a_new_time), Toast.LENGTH_LONG)
+        myToast.setGravity(Gravity.CENTER, 0, 0)
+        myToast.show()
+
+    }
+
+    private fun mainToast() {
+        val enterNumToast = Toast.makeText(this, getString(R.string.Enter_number_and_press_the_play_button), Toast.LENGTH_LONG)
+        var textViewToast = enterNumToast.vi
+        if
 
     }
 

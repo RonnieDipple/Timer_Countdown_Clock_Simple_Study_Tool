@@ -72,33 +72,20 @@
         android:id="@+id/txtViewCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/seperatorView"
-        android:layout_toEndOf="@+id/imageViewReset"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:text="@string/_00"
         android:textColor="@android:color/white"
         android:textColorLink="#7E7674"
-        android:textSize="150sp" />
+        android:textSize="180sp" />
 
-
-    <TextView
-        android:id="@+id/txtViewCountMinutes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_above="@+id/imageViewReset"
-        android:layout_toStartOf="@+id/seperatorView"
-        android:text="@string/_00"
-        android:textColor="@android:color/white"
-        android:textColorLink="#7E7674"
-        android:textSize="150sp" />
 
     <ImageView
         android:id="@+id/imageViewReset"
-        android:layout_width="200dp"
+        android:layout_width="150dp"
         android:layout_height="200dp"
-        android:layout_alignBottom="@+id/progressBar"
-        android:layout_marginBottom="192dp"
-        android:layout_toStartOf="@+id/imagePauseView"
+        android:layout_above="@+id/b2adView"
+        android:layout_toStartOf="@+id/editTCount"
         android:contentDescription="@string/reset_button"
         android:src="@drawable/ic_reset" />
 
@@ -112,22 +99,12 @@
         android:contentDescription="@string/this_button_starts_the_count_down_timer"
         android:src="@drawable/ic_start" />
 
-    <TextView
-        android:id="@+id/seperatorView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/txtViewCountMinutes"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="@font/montserrat"
-        android:text="@string/seperator"
-        android:textColor="#642815"
-        android:textSize="100sp" />
     <ImageView
         android:id="@+id/imagePauseView"
-        android:layout_width="200dp"
+        android:layout_width="150dp"
         android:layout_height="200dp"
-        android:layout_alignTop="@+id/imageViewReset"
-        android:layout_toEndOf="@+id/seperatorView"
+        android:layout_above="@+id/b2adView"
+        android:layout_toEndOf="@+id/editTCount"
         android:contentDescription="@string/pauses_the_count_down_timer"
         android:src="@drawable/ic_pause" />
 
@@ -146,4 +123,9 @@
 
 
 </RelativeLayout>
+
+
+
+
+
 
