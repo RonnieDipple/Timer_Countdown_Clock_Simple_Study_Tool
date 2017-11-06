@@ -6,4 +6,5 @@
     <string name="enter_minutes">Sisesta minut</string>
     <string name="Enter_number_of_minutes">Sisesta minutite arv</string>
     <string name="Enter_number_and_press_the_play_button">Sisestage number ja vajutage esitusnuppu</string>
+    <string name="Press_The_Play_button_again_to_confirm_a_new_time">Uue aja kinnitamiseks vajutage uuesti esitusnuppu</string>
 </resources>

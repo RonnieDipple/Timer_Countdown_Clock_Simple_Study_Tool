@@ -6,4 +6,5 @@
     <string name="enter_minutes">Ketik menit</string>
     <string name="Enter_number_of_minutes">Ketik nomer menit</string>
     <string name="Enter_number_and_press_the_play_button">Ketik nomer banjur pencet tombol muter</string>
+    <string name="Press_The_Play_button_again_to_confirm_a_new_time">Pencet tombol play maneh kanggo konfirmasi wektu sing anyar</string>
 </resources>

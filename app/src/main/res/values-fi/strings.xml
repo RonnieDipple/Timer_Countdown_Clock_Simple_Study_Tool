@@ -6,4 +6,5 @@
     <string name="enter_minutes">Anna minuutit</string>
     <string name="Enter_number_of_minutes">Anna minuuttien määrä</string>
     <string name="Enter_number_and_press_the_play_button">Anna numero ja paina toistopainiketta</string>
+    <string name="Press_The_Play_button_again_to_confirm_a_new_time">Vahvista uusi aika painamalla soittopainiketta uudelleen</string>
 </resources>

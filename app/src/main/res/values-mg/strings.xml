@@ -6,4 +6,5 @@
     <string name="enter_minutes">Karohy minitra</string>
     <string name="Enter_number_of_minutes">Ampidiro minitra maromaro</string>
     <string name="Enter_number_and_press_the_play_button">Ampidiro ny laharana ary tsindrio ny bokotra play</string>
+    <string name="Press_The_Play_button_again_to_confirm_a_new_time">Tsindrio indray ny bokotra indray mba hanamafisana fotoana vaovao</string>
 </resources>

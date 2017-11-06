@@ -5,4 +5,5 @@
     <string name="enter_minutes">Ipasok ang mga minuto</string>
     <string name="Enter_number_of_minutes">Ipasok ang bilang ng mga minuto</string>
     <string name="Enter_number_and_press_the_play_button">Ipasok ang numero at pindutin ang pindutan ng play</string>
+    <string name="Press_The_Play_button_again_to_confirm_a_new_time">Pindutin muli ang pindutan ng play upang kumpirmahin ang isang bagong oras</string>
 </resources>

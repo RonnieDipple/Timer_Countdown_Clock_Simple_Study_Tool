@@ -6,4 +6,5 @@
     <string name="enter_minutes">Voeg minute</string>
     <string name="Enter_number_of_minutes">Enter aantal minute</string>
     <string name="Enter_number_and_press_the_play_button">Voer nommer in en druk die speelknoppie</string>
+    <string name="Press_The_Play_button_again_to_confirm_a_new_time">Druk die speelknoppie weer om \'n nuwe tyd te bevestig</string>
 </resources>

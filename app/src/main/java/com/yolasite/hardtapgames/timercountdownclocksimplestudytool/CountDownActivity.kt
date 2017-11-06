@@ -21,8 +21,6 @@ import android.widget.LinearLayout
 import android.widget.Toast
 
 
-
-
 class CountDownActivity : AppCompatActivity() {
     lateinit private var pBar: ProgressBar
     lateinit private var editTCount: EditText
@@ -155,7 +153,12 @@ class CountDownActivity : AppCompatActivity() {
             //starts the show and prevents a null pointer exception
 
 
+
+
+
+
             if (!isRunning) {
+
                 if (editTCount.text.toString().isEmpty()) {
                     mainToast()
 
@@ -178,20 +181,19 @@ class CountDownActivity : AppCompatActivity() {
 
             //resets everything and activates reset boolean to true, to be checked in onFinish to prevent
             // the end sound from chiming when a new number is placed in the editTcount text field
-            if (editTCount.text.isEmpty() && isRunning) {
+            if (editTCount.text.isEmpty() && isRunning||editTCount.text.isEmpty() && !isRunning) {
 
 
                 stop()
                 millisLeft = 0
                 txtViewCount.text = "" + timeInMillis / 1000
-
                 pBar.progress = timeInMillis.toInt()
                 pBar.max = timeInMillis.toInt() / 1000
                 isReset = true
                 editTCount.text = null
 
 
-            } else if (editTCount.text.isEmpty() && !isRunning||editTCount.text.isEmpty() || editTCount.text.isNotEmpty() && startCount <= 0) {
+            } else if (editTCount.text.isEmpty() && !isRunning && startCount <= 0 || editTCount.text.isEmpty() || editTCount.text.isNotEmpty() && startCount <= 0) {
                 mainToast()
             } else {
                 stop()
@@ -327,7 +329,7 @@ class CountDownActivity : AppCompatActivity() {
             val tv = layout.getChildAt(0) as TextView
             tv.gravity = Gravity.CENTER_VERTICAL or Gravity.CENTER_HORIZONTAL
         }
-        toast.setGravity(Gravity.TOP,0,0)
+        toast.setGravity(Gravity.TOP, 0, 0)
         toast.show()
 
     }
@@ -341,7 +343,7 @@ class CountDownActivity : AppCompatActivity() {
             val tv = layout.getChildAt(0) as TextView
             tv.gravity = Gravity.CENTER_VERTICAL or Gravity.CENTER_HORIZONTAL
         }
-        toast.setGravity(Gravity.TOP,0,0)
+        toast.setGravity(Gravity.TOP, 0, 0)
         toast.show()
 
     }

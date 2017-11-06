@@ -6,4 +6,5 @@
     <string name="enter_minutes">မိနစ် Enter</string>
     <string name="Enter_number_of_minutes">မိနစ်အရေအတွက် Enter</string>
     <string name="Enter_number_and_press_the_play_button">အရေအတွက်က Enter နှင့် play ခလုတ်ကိုနှိပ်လိုက်ပါ</string>
+    <string name="Press_The_Play_button_again_to_confirm_a_new_time">သစ်တစ်ခုအချိန်ကိုအတည်ပြုရန်ပြန်ကစားခလုတ်ကိုနှိပ်ပါ</string>
 </resources>

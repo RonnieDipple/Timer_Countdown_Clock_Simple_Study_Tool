@@ -6,4 +6,5 @@
     <string name="enter_minutes">daqiqalarni kiritish</string>
     <string name="Enter_number_of_minutes">daqiqalarning sonini kiriting</string>
     <string name="Enter_number_and_press_the_play_button">Raqamni kiriting va ijro etish tugmasini bosing</string>
+    <string name="Press_The_Play_button_again_to_confirm_a_new_time">Yangi vaqtni tasdiqlash uchun o\'yin tugmasini yana bir marta bosing</string>
 </resources>

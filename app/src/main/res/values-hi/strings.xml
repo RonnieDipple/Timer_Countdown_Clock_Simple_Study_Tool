@@ -6,4 +6,5 @@
     <string name="enter_minutes">दर्ज करें मिनट</string>
     <string name="Enter_number_of_minutes">मिनटों की संख्या दर्ज करें</string>
     <string name="Enter_number_and_press_the_play_button">नंबर दर्ज करें और प्ले बटन दबाएं</string>
+    <string name="Press_The_Play_button_again_to_confirm_a_new_time">एक नया समय की पुष्टि करने के लिए प्ले बटन को फिर से दबाएं</string>
 </resources>

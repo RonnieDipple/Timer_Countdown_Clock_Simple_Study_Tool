@@ -6,4 +6,5 @@
     <string name="enter_minutes">నిమిషాల ఎంటర్</string>
     <string name="Enter_number_of_minutes">నిమిషాల సంఖ్య నమోదు</string>
     <string name="Enter_number_and_press_the_play_button">నంబర్ ను నమోదు చేసి నాటకం బటన్ను నొక్కండి</string>
+    <string name="Press_The_Play_button_again_to_confirm_a_new_time">కొత్త సమయం నిర్ధారించడానికి నాటకం బటన్ను మళ్లీ నొక్కండి</string>
 </resources>

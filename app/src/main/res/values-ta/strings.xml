@@ -6,4 +6,5 @@
     <string name="enter_minutes">நிமிடங்கள் சேர்க்கவும்</string>
     <string name="Enter_number_of_minutes">நிமிடங்கள் எண்ணிக்கை உள்ளிடவும்</string>
     <string name="Enter_number_and_press_the_play_button">எண்ணை உள்ளிட்டு நாடகம் பொத்தானை அழுத்தவும்</string>
+    <string name="Press_The_Play_button_again_to_confirm_a_new_time">ஒரு புதிய முறையை உறுதிப்படுத்த மீண்டும் நாடக பொத்தானை அழுத்தவும்</string>
 </resources>

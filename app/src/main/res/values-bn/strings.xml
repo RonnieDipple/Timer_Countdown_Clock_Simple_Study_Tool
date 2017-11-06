@@ -6,4 +6,5 @@
     <string name="enter_minutes">মিনিট লিখুন</string>
     <string name="Enter_number_of_minutes">মিনিট সংখ্যা লিখুন</string>
     <string name="Enter_number_and_press_the_play_button">নম্বর লিখুন এবং খেলা বাটন টিপুন</string>
+    <string name="Press_The_Play_button_again_to_confirm_a_new_time">একটি নতুন সময় নিশ্চিত করার জন্য আবার খেলা বাটন টিপুন</string>
 </resources>

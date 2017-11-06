@@ -6,4 +6,5 @@
     <string name="enter_minutes">Ange minuter</string>
     <string name="Enter_number_of_minutes">Ange antal minuter</string>
     <string name="Enter_number_and_press_the_play_button">Ange nummer och tryck på uppspelningsknappen</string>
+    <string name="Press_The_Play_button_again_to_confirm_a_new_time">Tryck på avspelningsknappen igen för att bekräfta en ny tid</string>
 </resources>

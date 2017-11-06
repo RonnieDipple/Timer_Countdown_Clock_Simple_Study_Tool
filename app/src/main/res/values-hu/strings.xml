@@ -6,4 +6,5 @@
     <string name="enter_minutes">Adja meg a perceket</string>
     <string name="Enter_number_of_minutes">Adja meg a percek számát</string>
     <string name="Enter_number_and_press_the_play_button">Írja be a számot, és nyomja meg a lejátszás gombot</string>
+    <string name="Press_The_Play_button_again_to_confirm_a_new_time">Nyomja meg ismét a lejátszás gombot új idő megerősítéséhez</string>
 </resources>

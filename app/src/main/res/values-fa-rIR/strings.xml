@@ -6,4 +6,5 @@
     <string name="enter_minutes">دقیقه را وارد کنید</string>
     <string name="Enter_number_of_minutes">تعداد دقیقه ها را وارد کنید</string>
     <string name="Enter_number_and_press_the_play_button">شماره را وارد کنید و دکمه پخش را فشار دهید</string>
+    <string name="Press_The_Play_button_again_to_confirm_a_new_time">برای تأیید یک زمان جدید دوباره دکمه پخش را فشار دهید</string>
 </resources>

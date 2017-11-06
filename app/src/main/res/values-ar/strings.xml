@@ -6,4 +6,5 @@
     <string name="enter_minutes">\'udkhul daqayiq</string>
     <string name="Enter_number_of_minutes">\'udkhul eadad aldaqayiq</string>
     <string name="Enter_number_and_press_the_play_button">أدخل الرقم واضغط على زر التشغيل</string>
+    <string name="Press_The_Play_button_again_to_confirm_a_new_time">اضغط على زر التشغيل مرة أخرى لتأكيد وقت جديد</string>
 </resources>

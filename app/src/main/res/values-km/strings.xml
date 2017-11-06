@@ -6,4 +6,5 @@
     <string name="enter_minutes">បញ្ចូលនាទី</string>
     <string name="Enter_number_of_minutes">បញ្ចូលលេខនាទី</string>
     <string name="Enter_number_and_press_the_play_button">បញ្ចូលលេខហើយចុចប៊ូតុងលេង</string>
+    <string name="Press_The_Play_button_again_to_confirm_a_new_time">ចុចប៊ូតុងលេងម្តងទៀតដើម្បីបញ្ជាក់ពេលវេលាថ្</string>
 </resources>

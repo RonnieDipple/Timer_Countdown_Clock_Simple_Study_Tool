@@ -6,4 +6,5 @@
     <string name="enter_minutes">Cuir isteach nóiméad</string>
     <string name="Enter_number_of_minutes">Cuir isteach líon na n-nóiméad</string>
     <string name="Enter_number_and_press_the_play_button">Cuir isteach uimhir agus brúigh an cnaipe dráma</string>
+    <string name="Press_The_Play_button_again_to_confirm_a_new_time">Brúigh an cnaipe dráma arís chun am nua a dhearbhú</string>
 </resources>

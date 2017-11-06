@@ -6,4 +6,5 @@
     <string name="enter_minutes">Εισάγετε λεπτά</string>
     <string name="Enter_number_of_minutes">Εισαγάγετε τον αριθμό των λεπτών</string>
     <string name="Enter_number_and_press_the_play_button">Πληκτρολογήστε τον αριθμό και πατήστε το κουμπί αναπαραγωγής</string>
+    <string name="Press_The_Play_button_again_to_confirm_a_new_time">Πατήστε ξανά το κουμπί αναπαραγωγής για να επιβεβαιώσετε νέα ώρα</string>
 </resources>

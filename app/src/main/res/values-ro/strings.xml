@@ -6,4 +6,5 @@
     <string name="enter_minutes">Introduceți minutele</string>
     <string name="Enter_number_of_minutes">Introduceți numărul de minute</string>
     <string name="Enter_number_and_press_the_play_button">Introduceți numărul și apăsați pe butonul de redare</string>
+    <string name="Press_The_Play_button_again_to_confirm_a_new_time">Apăsați butonul de redare din nou pentru a confirma un nou moment</string>
 </resources>

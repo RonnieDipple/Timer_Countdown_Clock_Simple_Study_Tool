@@ -6,4 +6,5 @@
     <string name="enter_minutes">ป้อนนาที</string>
     <string name="Enter_number_of_minutes">ป้อนจำนวนนาที</string>
     <string name="Enter_number_and_press_the_play_button">ป้อนหมายเลขและกดปุ่มเล่น</string>
+    <string name="Press_The_Play_button_again_to_confirm_a_new_time">กดปุ่มเล่นอีกครั้งเพื่อยืนยันเวลาใหม่</string>
 </resources>

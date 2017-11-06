@@ -6,4 +6,5 @@
     <string name="enter_minutes">Geli daqiiqo</string>
     <string name="Enter_number_of_minutes">Gali tirada daqiiqadaha</string>
     <string name="Enter_number_and_press_the_play_button">Geli lambarka iyo riix badhanka ciyaarta</string>
+    <string name="Press_The_Play_button_again_to_confirm_a_new_time">Riix batoonka ciyaarta mar kale si aad u xaqiijiso wakhti cusub</string>
 </resources>

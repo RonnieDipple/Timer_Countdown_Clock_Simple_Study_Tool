@@ -6,4 +6,5 @@
     <string name="enter_minutes">Futni minuta</string>
     <string name="Enter_number_of_minutes">Futni numrin e minutave</string>
     <string name="Enter_number_and_press_the_play_button">Futni numrin dhe shtypni butonin luaj</string>
+    <string name="Press_The_Play_button_again_to_confirm_a_new_time">Shtypni sërish butonin luaj për të konfirmuar një kohë të re</string>
 </resources>

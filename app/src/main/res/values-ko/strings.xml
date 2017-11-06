@@ -6,4 +6,5 @@
     <string name="enter_minutes">분 입력</string>
     <string name="Enter_number_of_minutes">분 입력</string>
     <string name="Enter_number_and_press_the_play_button">번호를 입력하고 재생 버튼을 누릅니다.</string>
+    <string name="Press_The_Play_button_again_to_confirm_a_new_time">재생 버튼을 다시 눌러 새 시간을 확인하십시오.</string>
 </resources>

@@ -6,4 +6,5 @@
     <string name="enter_minutes">प्रविष्ट मिनिटे</string>
     <string name="Enter_number_of_minutes">मिनिटे नंबर प्रविष्ट करा</string>
     <string name="Enter_number_and_press_the_play_button">नंबर प्रविष्ट करा आणि प्ले बटण दाबा</string>
+    <string name="Press_The_Play_button_again_to_confirm_a_new_time">नवीन वेळची पुष्टी करण्यासाठी प्ले बटण पुन्हा दाबा</string>
 </resources>
